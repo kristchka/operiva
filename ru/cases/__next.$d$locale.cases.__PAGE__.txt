@@ -1,0 +1,26 @@
+3:"$Sreact.fragment"
+4:"/operiva/_next/static/chunks/0umf92h1sb77c.js"
+5:I[39756,["$4"],"default"]
+6:I[37457,["$4"],"default"]
+b:I[97367,["$4"],"OutletBoundary"]
+c:"$Sreact.suspense"
+f:"ViewportBoundary"
+10:I[97367,["$4"],"$f"]
+11:"MetadataBoundary"
+12:I[97367,["$4"],"$11"]
+13:I[27201,["$4"],"IconMark"]
+8:X
+8:C
+9:X
+a:[["children",{"s":"__PAGE__","h":160,"d":{"r":["$","$3","c",{"children":[[["$","section",null,{"className":"hero page-hero","children":[["$","div",null,{"className":"grid-bg"}],["$","div",null,{"className":"glow glow-a"}],["$","div",null,{"className":"glow glow-b"}],["$","div",null,{"className":"wrap","children":[["$","p",null,{"className":"eyebrow fade-in","children":"Кейсы"}],["$","h1",null,{"className":"fade-in","children":"Практика без приукрашивания"}],["$","p",null,{"className":"lead fade-in-2","children":"Для каждого кейса мы указываем текущий статус, роль человека, подтверждённые результаты и ограничения. Тестовые результаты не выдаём за рост выручки или экономию персонала."}],["$","div",null,{"className":"fade-in-3"}]]}]]}],["$","section",null,{"className":"section section-alt","children":["$","div",null,{"className":"wrap","children":["$undefined",["$","div",null,{"className":"grid g2","children":[["$","a",null,{"href":"/operiva/ru/cases/tiflis/index.html","className":"card card-link","children":[["$","div",null,{"className":"badges","children":[["$","span",null,{"className":"badge badge-pilot","children":"Работает в пилоте"}],false,false]}],["$","h3",null,{"children":"AISI LAB в пилотном отеле TiFLiS"}],["$","p",null,{"children":"Общение с гостями, заявки сотрудникам и сводки для руководителя в действующем отеле."}],["$","span",null,{"className":"foot arrow-link","children":["Подробнее"," →"]}]]}],["$","div",null,{"className":"card","style":{"borderStyle":"dashed","background":"transparent"},"children":["$","p",null,{"className":"muted","children":"Новые кейсы появятся здесь после завершения пилотов и согласования с клиентами."}]}]]}]]}]}]],null,["$","$Lb",null,{"children":["$","$c",null,{"name":"Next.MetadataOutlet","children":"$@d"}]}]]}],"p":"$@e","v":null,"s":"$9"}}]]
+2:[["children",{"s":"cases","h":64,"d":{"r":["$","$3","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}]}]]}],"p":"$@7","v":"$8","s":"$9"},"c":"$Qa"}]]
+1:[["children",{"s":{"n":"locale","t":"d","k":"ru","s":[]},"h":48,"c":"$Q2"}]]
+0:{"t":{"t":{"s":"","h":80,"c":"$Q1"},"h":{"r":["$","$3","h",{"children":[null,["$","$L10",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","$L12",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$c",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"Кейсы — AISI LAB · OPERIVA"}],["$","meta","1",{"name":"description","content":"Практика внедрения AISI LAB с указанием статуса и условий проверки."}],["$","link","2",{"rel":"canonical","href":"https://operiva.com/operiva/ru/cases/index.html"}],["$","link","3",{"rel":"alternate","hrefLang":"ru","href":"https://operiva.com/operiva/ru/cases/index.html"}],["$","link","4",{"rel":"alternate","hrefLang":"en","href":"https://operiva.com/operiva/en/cases/index.html"}],["$","link","5",{"rel":"alternate","hrefLang":"de","href":"https://operiva.com/operiva/de/cases/index.html"}],["$","link","6",{"rel":"alternate","hrefLang":"es","href":"https://operiva.com/operiva/es/cases/index.html"}],["$","link","7",{"rel":"alternate","hrefLang":"it","href":"https://operiva.com/operiva/it/cases/index.html"}],["$","link","8",{"rel":"alternate","hrefLang":"fr","href":"https://operiva.com/operiva/fr/cases/index.html"}],["$","link","9",{"rel":"alternate","hrefLang":"ka","href":"https://operiva.com/operiva/ka/cases/index.html"}],["$","link","10",{"rel":"alternate","hrefLang":"pt","href":"https://operiva.com/operiva/pt/cases/index.html"}],["$","link","11",{"rel":"alternate","hrefLang":"x-default","href":"https://operiva.com/operiva/ru/cases/index.html"}],["$","meta","12",{"property":"og:title","content":"Кейсы — AISI LAB · OPERIVA"}],["$","meta","13",{"property":"og:description","content":"Практика внедрения AISI LAB с указанием статуса и условий проверки."}],["$","meta","14",{"property":"og:site_name","content":"OPERIVA — AISI LAB"}],["$","meta","15",{"property":"og:locale","content":"ru"}],["$","meta","16",{"property":"og:type","content":"website"}],["$","meta","17",{"name":"twitter:card","content":"summary"}],["$","meta","18",{"name":"twitter:title","content":"Кейсы — AISI LAB · OPERIVA"}],["$","meta","19",{"name":"twitter:description","content":"Практика внедрения AISI LAB с указанием статуса и условий проверки."}],["$","link","20",{"rel":"icon","href":"/operiva/icon.svg?icon.0mei5sg2y1vdj.svg","sizes":"any","type":"image/svg+xml"}],["$","$L13","21",{}]]}]}],null]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],"p":"$@14","v":null,"s":"$9"}},"a":"$@15","u":"$@16","b":"WhSkvic_mEs6dzSWX9mBx"}
+d:null
+16:true
+9:300
+9:C
+15:0
+7:"$undefined"
+14:"$undefined"
+e:"$undefined"
