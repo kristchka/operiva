@@ -1,6 +1,6 @@
-:HL["/operiva/_next/static/chunks/3-ep7m3017ptq.css","style"]
+:HL["/operiva/_next/static/chunks/1toczy6su4_0y.css","style"]
 :HC["/",""]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":"aisi-lab","h":64,"c":"$Q3"}]]
 1:[["children",{"s":{"n":"locale","t":"d","k":"fr","s":[]},"h":48,"c":"$Q2"}]]
-0:{"b":"WhSkvic_mEs6dzSWX9mBx","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"fHeu2hP33UnTX7-7cywwb","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
