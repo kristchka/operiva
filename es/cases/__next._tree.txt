@@ -1,6 +1,6 @@
-:HL["/operiva/_next/static/chunks/1toczy6su4_0y.css","style"]
+:HL["/operiva/_next/static/chunks/3zo7kbbj0lluv.css","style"]
 :HC["/",""]
 3:[["children",{"s":"__PAGE__","h":160}]]
 2:[["children",{"s":"cases","h":64,"c":"$Q3"}]]
 1:[["children",{"s":{"n":"locale","t":"d","k":"es","s":[]},"h":48,"c":"$Q2"}]]
-0:{"b":"fHeu2hP33UnTX7-7cywwb","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"_CfLUSVML8y6cBCswtRbg","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
