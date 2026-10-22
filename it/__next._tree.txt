@@ -1,5 +1,5 @@
-:HL["/operiva/_next/static/chunks/0envy-jc4w_0u.css","style"]
+:HL["/operiva/_next/static/chunks/05oukk215j7pm.css","style"]
 :HC["/",""]
 2:[["children",{"s":"__PAGE__","h":128}]]
 1:[["children",{"s":{"n":"locale","t":"d","k":"it","s":[]},"h":48,"c":"$Q2"}]]
-0:{"b":"THYZ75SytekOMBzQxmlw0","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
+0:{"b":"tB4fzJ-flwOy6FGmq0Qo0","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
