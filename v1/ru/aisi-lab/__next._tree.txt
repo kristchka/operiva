@@ -1,0 +1,6 @@
+:HL["/operiva/v1/_next/static/chunks/003av27vhuo9k.css","style"]
+:HC["/",""]
+3:[["children",{"s":"__PAGE__","h":160}]]
+2:[["children",{"s":"aisi-lab","h":64,"c":"$Q3"}]]
+1:[["children",{"s":{"n":"locale","t":"d","k":"ru","s":[]},"h":48,"c":"$Q2"}]]
+0:{"b":"Im_AJ5FWl7s0pBHQQV47n","t":{"t":{"s":"","h":80,"c":"$Q1"}}}
