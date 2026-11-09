@@ -12,7 +12,6 @@ const NAV: { key: RouteKey; label: keyof Dict["ui"]["nav"] }[] = [
   { key: "aisi", label: "aisi" },
   { key: "workforce", label: "workforce" },
   { key: "method", label: "method" },
-  { key: "gov", label: "gov" },
   { key: "cases", label: "cases" },
   { key: "company", label: "company" },
 ];

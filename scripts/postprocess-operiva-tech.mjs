@@ -43,6 +43,8 @@ const moved = [
   // прежние адреса operiva.tech (сборка master от 12.08.2026)
   ["/platform", "/laboratory"],
   ["/industries", "/products"],
+  // «Управление» объединено с «Внедрением» (09.11.2026): ведём на раздел страницы
+  ["/governance", "/implementation#control"],
   // адреса демо-версии макета (GitHub Pages) → адреса operiva.tech
   ["/lab", "/laboratory"],
   ["/aisi-lab/hotels", "/aisi-lab"],

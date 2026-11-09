@@ -45,7 +45,8 @@ export const routes = {
   hotels: "/aisi-lab",
   workforce: "/workforce",
   method: "/implementation",
-  gov: "/governance",
+  // Управление — раздел страницы «Внедрение и управление» (с 09.11.2026; /governance → 301).
+  gov: "/implementation",
   cases: "/cases",
   tiflis: "/cases/tiflis",
   company: "/company",
@@ -74,6 +75,7 @@ function runtimePrefix(): string {
 }
 
 export function href(locale: Locale, key: RouteKey, hash?: string) {
+  if (key === "gov" && !hash) hash = "control";
   if (cleanUrls) {
     const p = `${locale === defaultLocale ? "" : `/${locale}`}${routes[key]}` || "/";
     return `${p}${hash ? `#${hash}` : ""}`;

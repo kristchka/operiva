@@ -10,7 +10,7 @@ export const en: Dict = {
       aisi: ["AISI LAB", "A product family on one memory architecture: hotels, travel, security."],
       hotels: ["AISI HOTEL — AI for hotels", "AISI HOTEL answers guests in 7 languages in messengers and by phone, sets tasks for the team and gives the owner analytics. Freedom levels L1–L3, plans from $790 a month."],
       workforce: ["AI Workforce", "Digital employees for sales, support, bookings and reporting, with clear limits on autonomy."],
-      method: ["Methodology", "How we implement AI: from studying the process to scaling after a confirmed result."],
+      method: ["Implementation and governance", "How we implement AI step by step and how you govern it: access rights, human approval of decisions, an action log and data."],
       gov: ["Governance", "Access rights, human approval, action history and data principles."],
       cases: ["Cases", "AISI LAB in practice, with status and verification conditions."],
       tiflis: ["Case: TiFLiS pilot hotel", "How AISI LAB works at the TiFLiS pilot hotel: task, scope, the human role and limitations."],
@@ -25,7 +25,7 @@ export const en: Dict = {
       lab: "Lab",
       aisi: "AISI LAB",
       workforce: "AI Workforce",
-      method: "Methodology",
+      method: "Implementation & governance",
       gov: "Governance",
       cases: "Cases",
       company: "Company",
@@ -206,8 +206,7 @@ export const en: Dict = {
       text: "We help hand repetitive work over to AI: requests, bookings, tasks, reports. We start with one process and expand after a confirmed result.",
       links: [
         ["Digital employee roles", "workforce"],
-        ["Implementation methodology", "method"],
-        ["Governance and limits of autonomy", "gov"],
+        ["Implementation and governance", "method"],
         ["Case study", "tiflis"],
       ],
     },
@@ -602,10 +601,14 @@ export const en: Dict = {
 
   method: {
     hero: {
-      eyebrow: "Methodology",
-      title: "Step-by-step implementation",
-      lead: "We start with one scenario and expand after the result",
+      eyebrow: "Implementation and governance",
+      title: "We implement step by step, and you set the limits",
+      lead: "We start with one scenario and expand after the result. At every step AI works within limits set by people",
     },
+    stepsTitle: "How implementation works",
+    stepsText: "Seven steps from process review to expansion",
+    controlTitle: "How you govern AI",
+    controlText: "Rights, approvals and the action log are set up before launch and apply at every step",
     clientLabel: "What we need from you",
     steps: [
       ["Process review", "We see how it works today", "Describe the process"],

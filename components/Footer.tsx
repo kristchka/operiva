@@ -32,7 +32,6 @@ export function Footer({ locale, d }: { locale: Locale; d: Dict }) {
           <li><Link href={href(locale, "method")}>{d.ui.nav.method}</Link></li>
         </ul>
         <ul>
-          <li><Link href={href(locale, "gov")}>{d.ui.nav.gov}</Link></li>
           <li><Link href={href(locale, "cases")}>{d.ui.nav.cases}</Link></li>
           <li><Link href={href(locale, "company")}>{d.ui.nav.company}</Link></li>
           <li><Link href={href(locale, "contact")}>{f.contact}</Link></li>
