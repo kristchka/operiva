@@ -1,0 +1,9 @@
+<title>OPERIVA · AISI LAB</title>
+<meta name="description" content="Сайт лаборатории AISI LAB — демонстрационная версия для партнёров.">
+<style>:root{color-scheme:light}body{background:#fbfbfd;color:#0b0c10;font:16px/1.5 system-ui,sans-serif;display:grid;place-items:center;min-height:80vh;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}a{color:#4f46e5;font-weight:600}</style>
+<p>Открываем сайт… <a href="ru/index.html">Перейти вручную</a></p>
+<script>
+  var langs = ["ru","en","de","es","it","fr","ka","pt"];
+  var l = (navigator.language || "ru").slice(0, 2);
+  location.replace((langs.indexOf(l) > -1 ? l : "ru") + "/index.html");
+</script>
