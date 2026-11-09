@@ -948,3 +948,57 @@ body { font-size: 17px; color: var(--ink); background: var(--bg); }
 @media (max-width: 820px) { .split2 { grid-template-columns: 1fr; } }
 .chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
 .chips span { padding: 8px 14px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-2); font-weight: 600; font-size: .95rem; }
+
+/* ========== AISI HOTEL: факты, уровни свободы, возможности, тарифы, внедрение ========== */
+.ah-facts { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; margin: 36px 0 8px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.ah-facts > div { padding: 18px 20px 18px 0; display: flex; flex-direction: column; gap: 4px; }
+.ah-facts > div + div { padding-left: 20px; border-left: 1px solid var(--line); }
+.ah-facts b { font: 700 1.6rem/1.1 var(--font-display); letter-spacing: -0.02em; }
+.ah-facts span { color: var(--muted); font-size: 0.9rem; line-height: 1.4; }
+@media (max-width: 900px) {
+  .ah-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ah-facts > div:nth-child(3) { padding-left: 0; border-left: 0; }
+  .ah-facts > div:nth-child(n+3) { border-top: 1px solid var(--line); }
+}
+
+.ah-levels { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+@media (max-width: 900px) { .ah-levels { grid-template-columns: minmax(0, 1fr); } }
+.ah-level-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.ah-level-code { font: 700 2.4rem/1 var(--font-display); letter-spacing: -0.03em; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.ah-meter { display: flex; gap: 4px; }
+.ah-meter i { width: 22px; height: 6px; border-radius: 3px; background: var(--line); }
+.ah-meter i.on { background: var(--accent); }
+
+.ah-group + .ah-group { margin-top: 40px; }
+.ah-group > .eyebrow { margin-bottom: 14px; }
+
+.ah-plans { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
+@media (max-width: 1100px) { .ah-plans { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .ah-plans { grid-template-columns: minmax(0, 1fr); } }
+.ah-plan { gap: 12px; }
+.ah-plan p { margin: 0; }
+.ah-plan-name { font: 600 0.8rem var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent) !important; }
+.ah-plan-price b { font: 700 2.1rem/1 var(--font-display); letter-spacing: -0.03em; color: var(--ink); }
+.ah-plan-price span { color: var(--muted); font-size: 0.9rem; }
+.ah-plan-lead { font-weight: 600; color: var(--ink) !important; line-height: 1.35; min-height: 2.7em; }
+.ah-plan .list { gap: 8px; font-size: 0.93rem; }
+.ah-plan-calls { margin-top: auto !important; padding-top: 14px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 10px; font-size: 0.9rem; }
+.ah-plan-calls span { color: var(--muted); }
+.ah-notes { list-style: none; margin: 24px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 32px; color: var(--muted); font-size: 0.92rem; }
+.ah-notes li { padding-left: 14px; position: relative; }
+.ah-notes li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 5px; height: 5px; border-radius: 50%; background: var(--line-2); }
+@media (max-width: 760px) { .ah-notes { grid-template-columns: minmax(0, 1fr); } }
+
+.ah-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; counter-reset: none; }
+.ah-steps li { gap: 14px; }
+.ah-steps h3 { font-size: 1.05rem; margin-bottom: 6px; }
+.ah-steps p { font-size: 0.92rem; }
+.ah-step-n { width: 36px; height: 36px; border-radius: 10px; display: grid; place-items: center; background: var(--grad); color: #fff; font: 700 0.95rem var(--font-display); }
+@media (max-width: 1100px) { .ah-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .ah-steps { grid-template-columns: minmax(0, 1fr); } .ah-steps li { flex-direction: row; } }
+
+.ah-family { margin-top: 28px; max-width: 860px; }
+.ah-family .chips { margin-top: 4px; }
+.ah-family .chips span { background: var(--bg-2); color: var(--ink-2); font-weight: 500; }
+.ah-plan-calls b { white-space: nowrap; }
+.ah-step-n { flex: none; align-self: flex-start; }

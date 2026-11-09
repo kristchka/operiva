@@ -8,7 +8,7 @@ export const en: Dict = {
     pages: {
       lab: ["Lab", "Memory, context and character for AI: the NAL architecture, a digital assistant, a translator and digital legacy."],
       aisi: ["AISI LAB", "A product family on one memory architecture: hotels, travel, security."],
-      hotels: ["AISI LAB for hotels", "Guest communication, team requests and manager summaries in one system."],
+      hotels: ["AISI HOTEL — AI for hotels", "AISI HOTEL answers guests in 7 languages in messengers and by phone, sets tasks for the team and gives the owner analytics. Freedom levels L1–L3, plans from $790 a month."],
       workforce: ["AI Workforce", "Digital employees for sales, support, bookings and reporting, with clear limits on autonomy."],
       method: ["Methodology", "How we implement AI: from studying the process to scaling after a confirmed result."],
       gov: ["Governance", "Access rights, human approval, action history and data principles."],
@@ -91,16 +91,16 @@ export const en: Dict = {
     demoNote: "This is a demo chat with prepared answers. It is not connected to the team.",
     greeting:
       "Hello! I’m the AISI LAB assistant. I can tell you about the lab, its products and services, or help you leave a message for the team.",
-    quick: ["What is NAL?", "AISI LAB for hotels", "AI-powered website", "Leave a message"],
+    quick: ["What is NAL?", "AISI HOTEL for hotels", "AI-powered website", "Leave a message"],
     placeholder: "Type a question…",
     send: "Send",
     answers: {
       nal: "NAL is a neural memory architecture developed by the lab. It combines short-term, long-term and associative memory so that AI keeps context and experience. Status: prototype.",
       hotels:
-        "AISI LAB for hotels talks to guests, helps with bookings, passes requests to staff and gives the manager summaries. It currently runs at the TiFLiS pilot hotel.",
+        "AISI HOTEL is the first AISI LAB model for hotels. She answers guests in Telegram, WhatsApp, SMS, e-mail and by phone in 7 languages, makes bookings, sets tasks for staff and sends the owner a briefing every morning. The hotel chooses her level of freedom (L1–L3). Plans start at $790 a month. Running at the TiFLiS pilot hotel.",
       site: "We build websites with built-in AI: the assistant knows your business, answers visitors in their language, clarifies the request and passes it to your team.",
       products:
-        "AISI LAB directions: hotels (live in pilot), Travel (prototype, expected January 2027) and Security (prototype, expected April 2027).",
+        "AISI LAB directions: AISI HOTEL for hotels (live in pilot), Travel (prototype, expected January 2027) and Security (prototype, expected April 2027).",
       fallback:
         "In this demo I cover a limited set of topics: NAL, AISI LAB products and AI-powered websites. I can help you leave a message for the team.",
     },
@@ -126,7 +126,7 @@ export const en: Dict = {
         {
           title: "For business",
           items: [
-            ["hotels", "AI assistant for hotels", "Guests, requests, bookings and summaries"],
+            ["hotels", "AISI HOTEL for hotels", "Guests, team and owner in one system"],
             ["sites", "Website with an AI consultant", "Answers visitors, collects leads"],
             ["workforce", "Digital employees", "Sales, support, service, reports"],
             ["security", "Property security", "Cameras, locks, visitors, alerts"],
@@ -171,9 +171,9 @@ export const en: Dict = {
       tasksLabel: "Tasks",
       items: {
         hotels: {
-          name: "AISI LAB for hotels",
+          name: "AISI HOTEL",
           for: "Hotels and accommodation.",
-          tasks: "Guest communication, bookings, staff requests, manager summaries.",
+          tasks: "Guests in 7 languages in messengers and by phone, bookings, staff tasks, analytics and an owner briefing.",
         },
         travel: {
           name: "AISI LAB Travel",
@@ -315,8 +315,8 @@ export const en: Dict = {
       lead: "Hotels, travel and security on one memory technology",
     },
     hotels: {
-      name: "AISI LAB for hotels",
-      points: ["Guest communication", "Bookings and payments", "Sales channels", "Staff requests", "Manager summaries", "Your own assistant persona"],
+      name: "AISI HOTEL",
+      points: ["Guests in messengers and by phone, 24/7", "Bookings and own channel manager", "Answers in 7 languages", "Staff tasks with deadline control", "Analytics and owner briefing", "Freedom levels L1–L3, plans from $790"],
       statusText: "Live at the TiFLiS pilot hotel",
       link: "Product page",
     },
@@ -333,37 +333,132 @@ export const en: Dict = {
 
   hotels: {
     hero: {
-      eyebrow: "AISI LAB for hotels",
-      title: "Guests, team and manager, in one system",
-      lead: "The assistant answers guests, routes requests to departments and builds a summary for the manager",
+      eyebrow: "AISI HOTEL · the first AISI LAB model",
+      title: "The intelligence that brings the hotel together",
+      lead: "A team member who never sleeps, remembers every guest and works 24/7: answers guests, sets tasks for the team and gives the owner the full picture of the hotel",
       demo: "Request a demo",
-      discuss: "Discuss implementation",
+      discuss: "Discuss onboarding",
+      tour: "Meet AISI live",
     },
+    facts: [
+      ["24/7", "no days off, no holidays, no “call back in the morning”"],
+      ["7 languages", "by voice and text, others on the hotel's request"],
+      ["5 channels", "Telegram, WhatsApp, SMS, e-mail and phone"],
+      ["L1 → L3", "the hotel decides how much freedom AISI gets"],
+    ],
     guest: {
       title: "For guests",
-      points: ["Answers by hotel rules", "Help with bookings", "Requests without waiting"],
+      points: [
+        "Booking in any messenger, by e-mail or by phone",
+        "An answer in the guest's language within seconds",
+        "Transfers, the city, routes and reminders",
+        "Recognises a guest even a year later",
+        "Stays in touch for a full day after check-out",
+      ],
     },
     team: {
       title: "For the team",
-      points: ["Requests with context", "Owner and status", "Departments in sync"],
+      points: [
+        "One staff chat — AISI decides who gets what",
+        "Tasks with “taken — done” buttons and deadline control",
+        "Talks to every employee in their language",
+        "Shifts by occupancy, timesheets and onboarding newcomers",
+        "Reviews the day at night and learns by morning",
+      ],
     },
     manager: {
-      title: "For the manager",
-      points: ["The day on one screen", "Rooms, tasks and payments", "Where your decision is needed"],
-    },
-    booking: {
-      title: "Sales and personality",
-      items: [
-        ["Bookings", "Guides the guest to a confirmed booking"],
-        ["Payments", "Helps pay, refunds are decided by a person"],
-        ["Sales channels", "Every request in one history"],
+      title: "For the owner",
+      points: [
+        "Occupancy, ADR and RevPAR: yesterday, month and year to date",
+        "Competitor prices, reviews and advertising returns",
+        "Stock, suppliers and receipts photographed into chat",
+        "Rights by position and a log of every action",
+        "A morning briefing and a weekly report with proposals",
       ],
-      note: "Connections to hotel systems are checked for each property",
+    },
+    levels: {
+      title: "Three levels of freedom",
+      text: "The hotel chooses how much AISI decides on her own — and raises the level when it is ready",
+      items: [
+        ["L1", "Advises", "AISI picks an option and passes it to the administrator. A person approves, AISI records the decision and learns from it"],
+        ["L2", "Runs operations", "Creates bookings and closes rooms herself, reporting in chat and on the Dashboard. Discounts, refunds, bonuses and advertising are agreed with a person"],
+        ["L3", "Works autonomously", "Decides prices, discounts, upgrades, expenses and suppliers herself — based on competitors, season and demand, strictly by the hotel's rules"],
+      ],
+      note: "At every level AISI has no access to company accounts: she makes no payments, only tracks due dates and sends reminders. Many hotels start at L1 and move to L2 within a month",
+    },
+    caps: {
+      title: "What AISI HOTEL does",
+      text: "Everything AISI covers in the interactive presentation, grouped by role",
+      live: "Running at TiFLiS",
+      module: "Module",
+      groups: [
+        {
+          title: "Guests",
+          items: [
+            ["chat", "live", "Booking and channels", "Telegram, WhatsApp, SMS, e-mail and phone — she answers calls by voice. Checks the room grid, quotes the price and makes the booking"],
+            ["globe", "live", "The guest's language", "Georgian, English, Russian, Spanish, German, Italian and French. Switches language together with the guest"],
+            ["route", "live", "Care before and after the stay", "Asks about the flight and transfer, suggests where to go, reminds about check-out and stays in touch for a day after"],
+            ["heart", "live", "Guest memory", "Remembers habits and past stays. Greetings and offers are sent only with the guest's consent"],
+          ],
+        },
+        {
+          title: "Team",
+          items: [
+            ["flow", "live", "Staff and tasks", "Routes requests to the front desk, housekeeping, room service, security and maintenance — by position and by who is on shift"],
+            ["eye", "module", "Vision", "Connects to the hotel's cameras and notices events: a queue at the desk, a long wait in the restaurant. No face recognition, no video stored"],
+            ["user", "module", "People", "Shifts by occupancy, hours and pay calculations, training newcomers in the hotel's rules. AISI counts, a person pays"],
+            ["spark", "live", "Night mode", "Reviews the day and turns lessons into rules by morning. Holds a night booking and wakes the administrator"],
+          ],
+        },
+        {
+          title: "Owner",
+          items: [
+            ["grid", "module", "Analytics", "Occupancy, ADR, RevPAR, on-the-books, losses from cancellations and a forecast — with any periods compared"],
+            ["search", "module", "Marketing and prices", "Tracks competitor prices, reviews and advertising. On Expert she changes prices and runs campaigns by your rules"],
+            ["doc", "module", "Finance and stock", "Stock, suppliers, competitive quotes, invoices and delivery notes recognised from photos, period close"],
+            ["lock", "live", "Rights and control", "Positions and job descriptions from the questionnaire become the rights matrix. Every action is logged: who, when and on what basis"],
+            ["send", "live", "Owner's advisor", "A briefing every morning by messenger, e-mail or phone call, and a weekly report with concrete proposals"],
+            ["layers", "module", "Own channel manager", "Booking, Expedia, Airbnb and the website in one calendar without overbooking. Direct website bookings with no platform fees"],
+          ],
+        },
+      ],
+    },
+    tariffs: {
+      title: "Plans",
+      text: "For a hotel of up to 50 rooms, per month, excluding VAT. We have nothing to hide",
+      per: "per month",
+      calls: "Voice calls",
+      items: [
+        { name: "Light", price: "$790", lead: "Guests looked after around the clock", minutes: "300 min", points: ["Guests in Telegram and WhatsApp in their language", "Bookings and the room grid"] },
+        { name: "Standard", price: "$1,190", lead: "Plus the hotel's numbers", minutes: "400 min", points: ["Everything in Light", "Hotel figures and stock", "Booking module on your website with no fees"] },
+        { name: "Max", price: "$1,990", lead: "AISI sees the whole hotel and advises, you decide", minutes: "1,800 min", points: ["Guest memory and care after check-out", "Staff tasks, people and shifts", "Sales channels without overbooking", "Analytics, forecast, competitors, reviews, marketing", "Bookkeeping"] },
+        { name: "Expert", price: "$2,990", lead: "AISI brings in money herself — strictly by your rules", minutes: "2,500 min", points: ["Prices by your rules and turnkey marketing", "Full financial analysis", "Morning briefing and weekly report", "A personal advisor to the owner", "A hotel chain in one window"] },
+      ],
+      notes: [
+        "Onboarding — $2,100, one time",
+        "Each room above 50 — $25 per month: for a 60-room hotel Light comes to $1,040 and Expert to $3,240",
+        "Call minutes above the package — $0.35. WhatsApp messages are billed at Meta's rates",
+        "On Expert every AISI action is visible, and approvals can be switched on or AISI stopped at any moment",
+      ],
+    },
+    onboarding: {
+      title: "How onboarding works",
+      text: "The timeline depends on your data and connections",
+      steps: [
+        ["Hotel questionnaire", "Positions, rules and job descriptions. From them AISI builds her rights matrix"],
+        ["Data transfer and reconciliation", "Rooms, rates, guests and bookings are moved and checked together with your team"],
+        ["Soft start", "AISI connects to your PMS and channel manager read-only: you keep booking as usual, and she sees everything"],
+        ["Team training and pilot", "Staff learn to work with AISI in chat and on the Dashboard, the hotel chooses the level of freedom"],
+        ["Full operation", "Bookings are run in the AISI Dashboard. She syncs them to your system — or you drop it altogether"],
+      ],
     },
     persona: {
-      title: "The assistant’s personality",
-      text: "Name, character and look of the assistant are tailored to your hotel",
-      items: ["Name", "Communication style", "Knowledge base", "Digital image"],
+      title: "Your AISI",
+      text: "The hotel chooses her name, character and extra skills. At the TiFLiS pilot hotel her name is Maria",
+      items: ["Name", "Conversation style", "Hotel knowledge base", "Digital persona"],
+      family: "Other products in the AISI LAB line",
+      products: ["AISI Stock", "AISI Restaurant", "AISI Security", "AISI Travel", "AISI Personal Assistant", "AISI Accounting"],
+      familyNote: "Ask our team to learn more about them",
     },
     scenarios: {
       title: "How it works",
@@ -410,14 +505,17 @@ export const en: Dict = {
       envPilot: "Pilot hotel",
       empty: "Figures will appear after pilot measurements",
       limits: [
-        "Refunds and exceptions are decided by staff",
+        "No access to company accounts — only people make payments",
+        "Money matters — discounts, refunds, bonuses — are decided by a person on L1 and L2",
+        "No face recognition by default, no camera video stored",
+        "Every action is logged: who, when and on what basis",
         "If it doesn’t know, it hands over to a person",
-        "Languages and connections set per property",
       ],
     },
     next: {
-      title: "Next step",
-      text: "We’ll show the product or discuss where to start at your hotel",
+      title: "See AISI in action",
+      text: "In the interactive presentation AISI tells you about herself by voice, answers questions and shows the live Dashboard of the TiFLiS hotel",
+      tour: "Open the presentation",
     },
   },
 
