@@ -1,0 +1,66 @@
+# Прежние редиректы сайта (site/build.mjs, master 12.08.2026)
+/index.html            /              301
+/cases.html            /cases/tiflis  301
+/telegram-submit.php   /contact       301
+
+# Страницы, которые заменены новыми
+/platform              /laboratory    301
+/industries            /products      301
+/lab                   /laboratory    301
+/aisi-lab/hotels       /aisi-lab      301
+/ai-workforce          /workforce     301
+/methodology           /implementation 301
+/data-processing       /data          301
+/en/platform /en/laboratory 301
+/en/industries /en/products 301
+/en/lab /en/laboratory 301
+/en/aisi-lab/hotels /en/aisi-lab 301
+/en/ai-workforce /en/workforce 301
+/en/methodology /en/implementation 301
+/en/data-processing /en/data 301
+/de/platform /de/laboratory 301
+/de/industries /de/products 301
+/de/lab /de/laboratory 301
+/de/aisi-lab/hotels /de/aisi-lab 301
+/de/ai-workforce /de/workforce 301
+/de/methodology /de/implementation 301
+/de/data-processing /de/data 301
+/es/platform /es/laboratory 301
+/es/industries /es/products 301
+/es/lab /es/laboratory 301
+/es/aisi-lab/hotels /es/aisi-lab 301
+/es/ai-workforce /es/workforce 301
+/es/methodology /es/implementation 301
+/es/data-processing /es/data 301
+/it/platform /it/laboratory 301
+/it/industries /it/products 301
+/it/lab /it/laboratory 301
+/it/aisi-lab/hotels /it/aisi-lab 301
+/it/ai-workforce /it/workforce 301
+/it/methodology /it/implementation 301
+/it/data-processing /it/data 301
+/fr/platform /fr/laboratory 301
+/fr/industries /fr/products 301
+/fr/lab /fr/laboratory 301
+/fr/aisi-lab/hotels /fr/aisi-lab 301
+/fr/ai-workforce /fr/workforce 301
+/fr/methodology /fr/implementation 301
+/fr/data-processing /fr/data 301
+/ka/platform /ka/laboratory 301
+/ka/industries /ka/products 301
+/ka/lab /ka/laboratory 301
+/ka/aisi-lab/hotels /ka/aisi-lab 301
+/ka/ai-workforce /ka/workforce 301
+/ka/methodology /ka/implementation 301
+/ka/data-processing /ka/data 301
+/pt/platform /pt/laboratory 301
+/pt/industries /pt/products 301
+/pt/lab /pt/laboratory 301
+/pt/aisi-lab/hotels /pt/aisi-lab 301
+/pt/ai-workforce /pt/workforce 301
+/pt/methodology /pt/implementation 301
+/pt/data-processing /pt/data 301
+
+# Русская версия живёт в корне: ссылки вида /ru/… ведут туда же
+/ru                    /              301
+/ru/*                  /:splat        301
