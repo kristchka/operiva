@@ -12,7 +12,6 @@ export function Footer({ locale, d }: { locale: Locale; d: Dict }) {
           <Link href={href(locale, "home")} className="logo">
             <span className="logo-mark" aria-hidden />
             <b>OPERIVA</b>
-            <span className="logo-sub">AISI LAB</span>
           </Link>
           <p style={{ marginTop: 14, maxWidth: 360 }}>{f.tagline}</p>
           <p className="muted small">

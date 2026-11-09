@@ -30,10 +30,9 @@ export function Header({ locale, ui }: { locale: Locale; ui: Dict["ui"] }) {
   return (
     <header className="header">
       <div className="wrap header-in">
-        <Link href={href(locale, "home")} className="logo" aria-label="OPERIVA, AISI LAB">
+        <Link href={href(locale, "home")} className="logo" aria-label="OPERIVA">
           <span className="logo-mark" aria-hidden />
           <b>OPERIVA</b>
-          <span className="logo-sub">AISI LAB</span>
         </Link>
         <nav className="nav" aria-label="Main">
           {NAV.map((n) => (
