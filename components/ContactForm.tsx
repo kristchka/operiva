@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "@/components/SmartLink";
 import type { Dict } from "@/content";
-import { href, isStaticSite, type Locale } from "@/lib/i18n";
+import { href, isStaticSite, cleanUrls, type Locale } from "@/lib/i18n";
 
 type State = "idle" | "sending" | "ok" | "error" | "not-configured";
 type Errors = Partial<Record<"name" | "contact" | "task", boolean>>;
@@ -18,6 +18,8 @@ export function ContactForm({ locale, f }: { locale: Locale; f: Dict["form"] }) 
     if (Number.isInteger(t) && t >= 0 && t < f.topics.length) setDefaultTopic(t);
   }, [f.topics.length]);
   const [errors, setErrors] = useState<Errors>({});
+  // Время открытия формы: обработчик /api/lead отбрасывает заявки, заполненные быстрее 2,5 с.
+  const [openedAt] = useState(() => Date.now());
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -37,6 +39,34 @@ export function ContactForm({ locale, f }: { locale: Locale; f: Dict["form"] }) 
     if (errs.name || errs.contact || errs.task) {
       const first = (["name", "contact", "task"] as const).find((k) => errs[k]);
       if (first) (e.currentTarget.elements.namedItem(first) as HTMLElement | null)?.focus();
+      return;
+    }
+    // operiva.tech: действующий обработчик Cloudflare Pages /api/lead → Telegram.
+    // Поля — те, что он принимает: name, contact (обязательные), company, process, form, page,
+    // ловушка website и время заполнения elapsed. Токены живут только в настройках Cloudflare.
+    if (cleanUrls) {
+      setState("sending");
+      try {
+        const res = await fetch("/api/lead", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({
+            form: `${data.topic || "Обращение"} · ${locale.toUpperCase()}`,
+            name: data.name,
+            company: data.company,
+            contact: data.contact,
+            process: data.task,
+            website: data.website,
+            elapsed: Date.now() - openedAt,
+            page: window.location.pathname,
+          }),
+        });
+        const body = (await res.json().catch(() => ({}))) as { ok?: boolean; error?: string };
+        if (res.status === 503 || body.error === "not_configured") return setState("not-configured");
+        setState(res.ok && body.ok ? "ok" : "error");
+      } catch {
+        setState("error");
+      }
       return;
     }
     // В статической демо-версии сервера нет — честно сообщаем, что отправка не подключена.

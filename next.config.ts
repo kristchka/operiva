@@ -7,7 +7,7 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const nextConfig: NextConfig = {
   poweredByHeader: false,
-  ...(isStatic ? { output: "export", trailingSlash: true, images: { unoptimized: true }, ...(basePath ? { basePath } : {}) } : {}),
+  ...(isStatic ? { output: "export", trailingSlash: process.env.NEXT_PUBLIC_CLEAN_URLS !== "1", images: { unoptimized: true }, ...(basePath ? { basePath } : {}) } : {}),
 };
 
 export default nextConfig;

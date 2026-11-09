@@ -12,7 +12,7 @@ export const site = {
   messenger: "",
   /** Доставка сообщений из чата команде. Пока false — чат работает как демонстрация. */
   chatDeliveryEnabled: process.env.NEXT_PUBLIC_CHAT_DELIVERY_ENABLED === "true",
-  url: "https://operiva.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://operiva.com",
   /** Интерактивная презентация AISI HOTEL (голос, главы, живой Дашборд TiFLiS). */
   presentation: "https://aisi.148.251.2.145.sslip.io/",
 };
