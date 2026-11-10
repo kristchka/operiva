@@ -1,0 +1,1166 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AISI HOTEL — ИИ-сотрудник для отелей</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0E0B08">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AISI HOTEL — ИИ-сотрудник для отелей">
+<meta property="og:description" content="Ни один гость не останется без ответа. Макет сайта с живой демонстрацией.">
+<meta property="og:image" content="https://kristchka.github.io/operiva/hotel/og.jpg">
+<meta property="og:url" content="https://kristchka.github.io/operiva/hotel/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Макет сайта AISI HOTEL — ИИ-сотрудник для отелей">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{--gut:12px}
+:root{--bg:#0E0B08;--fg:#F3EBE0;color-scheme:dark;--gut:max(16px, env(safe-area-inset-left, 0px))}
+body{margin:0;background:var(--bg);color:var(--fg)}
+html{scroll-behavior:smooth}
+[v-cloak]{display:none}
+a{color:inherit;text-decoration:none}
+a:hover{opacity:.85}
+.w{max-width:1320px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.sec{padding-top:120px}
+.ey{margin:0 0 14px;font-size:13px;font-weight:600;letter-spacing:.02em;color:#CDB89D;display:inline-flex;gap:8px;align-items:center}
+.ey::before{content:"";width:6px;height:6px;border-radius:50%;background:#E2843E}
+.ey-dark{color:#7A5A3C}
+.h2{margin:0;font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(34px,3.6vw,52px);line-height:1.02;letter-spacing:-.035em;color:#FFF8EE}
+.lead{margin:0;font-size:16px;line-height:1.55;color:#BFB3A6}
+.head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.cd{background:rgba(255,240,220,.045);border:1px solid rgba(255,236,212,.10);border-radius:28px;box-sizing:border-box}
+.cd2{background:#17120E;border:1px solid rgba(255,236,212,.10);box-sizing:border-box}
+.stone{background:#EFE7DC;color:#16110C}
+.btn-iv{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;border-radius:999px;background:#FFF8EE;color:#16110C;font:700 15px Inter,sans-serif;border:0;cursor:pointer;box-sizing:border-box}
+.chip{display:inline-flex;align-items:center;padding:9px 14px;border-radius:999px;background:rgba(255,240,220,.07);color:#E9DFD2;font-size:14px}
+.ring{width:46px;height:46px;border-radius:50%;display:grid;place-items:center;flex:none}
+.ph{position:relative;overflow:hidden;border-radius:28px;background:#0B0907;box-sizing:border-box}
+.ph-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph-shade{position:absolute;inset:0;pointer-events:none}
+.num-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.num-cell{padding:0 24px}
+.num-cell:first-child{padding-left:0}
+.num-cell + .num-cell{border-left:1px solid rgba(255,236,212,.12)}
+.bento{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.pain-row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) 56px;gap:24px;align-items:center}
+.lv-row{display:grid;grid-template-columns:96px minmax(0,1fr) minmax(0,1.3fr) 48px;gap:24px;align-items:center}
+.how-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.price-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.demo-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+input[type=range]{accent-color:#E2843E;width:100%}
+.live-grid{display:grid;grid-template-columns:minmax(0,0.92fr) minmax(0,1.08fr);gap:16px}
+.chat-scroll,.board-scroll{scrollbar-width:thin}
+.tdot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#9C9084;animation:tblink 1.2s infinite ease-in-out}
+.tdot:nth-child(2){animation-delay:.18s}.tdot:nth-child(3){animation-delay:.36s}
+@keyframes tblink{0%,80%,100%{opacity:.25;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
+.note-in{animation:notein .45s ease-out}
+@keyframes notein{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+button:disabled{opacity:.45;cursor:default}
+.fld{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:#16110C}
+.fld input{min-height:52px;padding:0 18px;border-radius:16px;border:1px solid #D9CCBB;background:#FFFDF9;font:400 16px Inter,sans-serif;color:#16110C}
+.hx{position:relative;height:700px;overflow:hidden;border-radius:32px;color:#FFFFFF;background:#0B0907;container-type:inline-size;--pw:450px}
+.hx-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 58%}
+.hx-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,6,5,.55) 0%,rgba(8,6,5,0) 22%),linear-gradient(0deg,rgba(8,6,5,.5) 0%,rgba(8,6,5,0) 30%)}
+.hx-panel{position:absolute;left:0;top:0;bottom:0;width:calc(var(--pw) + 120px);background:rgba(255,244,230,.05);backdrop-filter:blur(24px) saturate(125%);-webkit-backdrop-filter:blur(24px) saturate(125%);-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 260px),transparent 100%);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 260px),transparent 100%)}
+.hx-word{position:absolute;left:0;right:0;top:0;margin:0;padding:96px 0 0 40px;box-sizing:border-box;font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(250px,27cqw,300px);line-height:.8;letter-spacing:-0.06em;white-space:nowrap;pointer-events:none;background:linear-gradient(90deg,rgba(255,244,230,.26) 0,rgba(255,244,230,.26) calc(var(--pw) - 210px),#FFF8EE calc(var(--pw) + 70px),#FFF8EE 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hx-top{position:absolute;left:44px;right:44px;top:28px;display:flex;align-items:center;justify-content:space-between;gap:16px;z-index:5}
+.hx-offer{position:absolute;left:44px;bottom:44px;width:370px;display:flex;flex-direction:column;gap:14px;z-index:5}
+.hx-card{position:absolute;right:44px;bottom:44px;width:340px;box-sizing:border-box;border-radius:24px;padding:18px;background:rgba(16,12,9,.62);border:1px solid rgba(255,236,212,.22);backdrop-filter:blur(20px) saturate(130%);-webkit-backdrop-filter:blur(20px) saturate(130%);box-shadow:0 30px 70px rgba(0,0,0,.45);z-index:5}
+.hx-pill{position:absolute;right:44px;top:104px;display:flex;align-items:center;gap:10px;padding:8px 14px 8px 8px;border-radius:999px;background:rgba(255,250,243,.94);color:#16110C;box-shadow:0 14px 34px rgba(0,0,0,.35);z-index:5}
+.hx-m{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin-top:12px}
+.hx-m div{border-radius:12px;padding:9px 10px;background:rgba(255,240,220,.07)}
+.hx-m b{display:block;font-family:'Inter Tight',sans-serif;font-size:20px;letter-spacing:-.02em}
+.hx-m span{font-size:11px;color:#BFB3A6}
+.show-sm,.show-sm-i,.price-hint,.mbar{display:none}
+.foot-word{margin:28px 0 0;font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(72px,14.5vw,230px);line-height:.74;letter-spacing:-.065em;text-align:center;white-space:nowrap;transform:translateY(16%);background:linear-gradient(180deg,#FFF8EE 0%,rgba(255,248,238,.35) 70%,rgba(255,248,238,.08) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+@media (max-width:1000px){
+.sec{padding-top:88px}
+.live-grid{grid-template-columns:minmax(0,1fr)}
+.num-grid{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:24px}
+.num-cell + .num-cell{border-left:0}
+.num-cell{padding:0}
+.bento > *{grid-column:span 12 !important}
+.pain-row{grid-template-columns:minmax(0,1fr);gap:10px}
+.pain-row > :last-child{display:none}
+.lv-row{grid-template-columns:minmax(0,1fr);gap:10px}
+.lv-row > :last-child{display:none}
+.how-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.price-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.demo-grid{grid-template-columns:minmax(0,1fr)}
+.hx{height:auto;--pw:100%;display:flex;flex-direction:column;padding:22px 20px 26px}
+.hx-photo{position:absolute;height:420px;object-position:72% 50%}
+.hx-shade{background:linear-gradient(180deg,rgba(8,6,5,.6) 0%,rgba(8,6,5,.1) 30%,rgba(11,9,7,.85) 62%,#0B0907 72%)}
+.hx-panel,.hx-links,.hx-pill{display:none !important}
+.hx-top{order:-1}
+.hx-top,.hx-offer,.hx-word,.hx-card{position:relative;left:auto;right:auto;top:auto;bottom:auto}
+.hx-word{background:none;color:#FFF8EE;padding:0;font-size:30vw;margin:150px 0 30px}
+.hx-offer{width:auto}
+.hx-card{width:auto;margin-top:24px}
+}
+@media (max-width:620px){
+.w{padding:0 4px}
+.sec{padding-top:72px}
+.head-row{margin-bottom:26px !important;gap:14px}
+.h2{font-size:32px}
+.lead{font-size:15.5px}
+.num-grid,.how-grid{grid-template-columns:minmax(0,1fr)}
+.cd-pad{padding:22px !important}
+.hide-sm{display:none !important}
+.show-sm{display:block !important}
+.show-sm-i{display:inline !important}
+.bento{gap:12px}
+footer.cd{padding:28px 22px 0 !important}
+.foot-word{font-size:13.5vw}
+/* hero */
+.hx{padding:18px 18px 20px;border-radius:26px}
+.hx-word{font-size:31vw;margin:124px 0 26px}
+.hx-offer h1{font-size:34px !important}
+.hx-card{margin-top:22px}
+.hx-logo{white-space:nowrap;font-size:17px !important}
+.hx-cta{padding:0 16px !important;font-size:13px;white-space:nowrap}
+/* criteria: icon left, text right */
+.crit .num-grid{row-gap:20px}
+.crit .num-cell{display:grid;grid-template-columns:40px minmax(0,1fr);column-gap:14px;align-items:start}
+.crit .num-cell > span{grid-row:span 2;width:40px !important;height:40px !important}
+.crit .num-cell > p{margin:0 !important;font-size:17px !important}
+.crit .num-cell > p + p{margin-top:4px !important;font-size:14px !important}
+/* live demo */
+.role-sw{display:flex !important;width:100%}
+.role-sw button{flex:1;padding:0 12px !important}
+.chat-box{height:560px !important;border-radius:24px !important}
+.chat-head{padding:14px !important;gap:10px !important}
+.reset-btn{width:40px;padding:0 !important}
+.chips-row{flex-wrap:nowrap !important;overflow-x:auto;margin:0 -16px;padding:0 16px 2px;scrollbar-width:none}
+.chips-row::-webkit-scrollbar{display:none}
+.chips-row button{flex:none;min-height:42px !important}
+.chat-in{font-size:16px !important}
+.board-box{height:520px !important;border-radius:24px !important}
+.board-head{flex-wrap:wrap}
+.board-title{font-size:18px !important}
+.board-pad{padding-left:16px !important;padding-right:16px !important}
+.board-pad .btn-iv{font-size:14px;padding:0 14px}
+/* pain */
+.pain-row{padding:20px 0 !important}
+.pain-q{font-size:20px !important;line-height:1.2}
+.pain-row p + p{font-size:15px !important}
+/* features */
+.ph-in{padding:22px !important}
+.card-h{font-size:28px !important}
+.mem-q{font-size:21px !important}
+.bento > .sm-card{grid-column:span 6 !important;padding:18px !important}
+.sm-card h3{font-size:17px !important;line-height:1.2}
+.sm-card p{font-size:14px !important}
+/* how */
+.how-grid{gap:18px}
+.how-pill{min-height:76px !important;font-size:23px !important}
+.how-arrow svg{transform:rotate(90deg);width:40px;height:26px}
+/* levels */
+.lv-h{font-size:28px !important}
+.lv-row{grid-template-columns:auto minmax(0,1fr) !important;column-gap:14px;row-gap:6px;padding:18px !important}
+.lv-row > :nth-child(3){grid-column:1 / -1}
+.lv-n{font-size:30px !important;line-height:1}
+/* pricing: swipe carousel that bleeds to the screen edge */
+.price-hint{display:flex !important;align-items:center;gap:6px;margin:0 0 12px;font-size:13px;color:#A89B8C}
+.price-grid{display:flex !important;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;margin:0 calc(-1 * (var(--gut) + 4px));padding:0 calc(var(--gut) + 4px) 4px;scroll-padding:0 calc(var(--gut) + 4px)}
+.price-grid::-webkit-scrollbar{display:none}
+.price-grid{align-items:flex-start}
+.price-grid > .price-card{flex:0 0 84%;scroll-snap-align:start;padding:22px !important;box-shadow:none !important}
+/* case, faq, demo */
+.case-h{font-size:32px !important}
+.faq-q{font-size:17px !important;min-height:64px !important;padding:16px 0 !important}
+.faq-a{padding:0 0 20px !important;font-size:15px !important}
+.demo-ph{min-height:420px !important}
+/* comfortable tap targets */
+input[type=range]{height:28px}
+footer nav a{display:inline-flex;align-items:center;min-height:40px}
+footer nav{gap:4px 20px !important}
+/* sticky action bar */
+.mbar{display:flex;gap:8px;align-items:center;position:fixed;z-index:50;left:max(12px, env(safe-area-inset-left, 0px));right:max(12px, env(safe-area-inset-right, 0px));bottom:max(12px, env(safe-area-inset-bottom, 0px));padding:6px;border-radius:999px;background:rgba(22,17,12,.82);border:1px solid rgba(255,236,212,.14);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);box-shadow:0 18px 40px rgba(0,0,0,.45);transform:translateY(160%);visibility:hidden;transition:transform .3s ease,visibility 0s linear .3s}
+.mbar.on{transform:none;visibility:visible;transition:transform .3s ease}
+.mbar-ghost{flex:1;display:flex;align-items:center;justify-content:center;min-height:46px;border-radius:999px;font-size:14px;font-weight:600;color:#FFF8EE}
+.mbar-main{flex:1.25;min-height:46px !important;padding:0 14px !important;font-size:14px !important}
+}
+@media (max-width:380px){
+.bento > .sm-card{grid-column:span 12 !important}
+.mbar-ghost{font-size:13px}
+.mbar-main{font-size:13px !important;padding:0 10px !important}
+}
+</style>
+</head>
+<body>
+<div id="app" v-cloak>
+<div style="font-family: Inter, system-ui, sans-serif; color: #F3EBE0; background: #0E0B08; padding: 12px max(16px, env(safe-area-inset-right, 0px)) 0 max(16px, env(safe-area-inset-left, 0px)); box-sizing: border-box; min-width: 0">
+
+<!-- ================= HERO (фото лобби + стекло) ================= -->
+<section class="hx">
+  <img class="hx-photo" src="lobby.webp" alt="Лобби отеля вечером: арка из травертина, стойка ресепшен и вид на море">
+  <div class="hx-shade" aria-hidden="true"></div>
+  <div class="hx-panel" aria-hidden="true"></div>
+  <p class="hx-word" aria-hidden="true">AISI</p>
+
+  <div class="hx-top">
+    <a href="#top" class="hx-logo" style="font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: -0.02em">AISI HOTEL</a>
+    <nav aria-label="Разделы" style="display: flex; gap: 26px; align-items: center; font-size: 14px; font-weight: 500; color: #EFE6DA">
+      <a class="hx-links" href="#live">Попробовать</a>
+      <a class="hx-links" href="#features">Возможности</a>
+      <a class="hx-links" href="#pricing">Тарифы</a>
+      <a class="hx-links" href="#faq">Вопросы</a>
+      <a href="#demo" class="hx-cta" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #FFF8EE; color: #16110C; font-weight: 600">Записаться на демо</a>
+    </nav>
+  </div>
+
+  <div class="hx-offer">
+    <p style="margin: 0; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; color: #E6C9A4">ИИ-СОТРУДНИК ДЛЯ ОТЕЛЕЙ</p>
+    <h1 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 36px; line-height: 1.05; letter-spacing: -0.03em">Ни один гость не останется без ответа</h1>
+    <p style="margin: 0; font-size: 15.5px; line-height: 1.55; color: #D9CFC3">AISI отвечает гостям за секунды на их языке, оформляет брони, раздаёт задачи команде и каждое утро присылает вам отчёт.</p>
+    <div style="display: flex; gap: 18px; align-items: center; flex-wrap: wrap; margin-top: 4px">
+      <a href="#demo" style="display: inline-flex; align-items: center; min-height: 50px; padding: 0 24px; border-radius: 999px; background: #FFF8EE; color: #16110C; font-weight: 700; font-size: 15px">Записаться на демо</a>
+      <a href="#live" @click="asGuest" style="font-size: 15px; font-weight: 600; border-bottom: 1px solid currentColor; padding-bottom: 2px">Поговорить с&nbsp;AISI&nbsp;↗</a>
+    </div>
+    <p style="margin: 2px 0 0; font-size: 13px; color: #BFB3A6">От $790/мес · работает с вашей PMS · пилот в TiFLiS</p>
+  </div>
+
+  <div class="hx-pill">
+    <span aria-hidden="true" style="width: 30px; height: 30px; border-radius: 50%; background: #1E9E63; display: grid; place-items: center"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg></span>
+    <span style="font-size: 13px"><b>03:12</b> · гость получил ответ и бронь</span>
+  </div>
+
+  <div class="hx-card">
+    <div style="display: flex; align-items: center; gap: 10px">
+      <span aria-hidden="true" style="width: 34px; height: 34px; border-radius: 50%; background: #FFF8EE; display: grid; place-items: center; flex: none"><span style="width: 11px; height: 11px; border-radius: 50%; background: #E2843E"></span></span>
+      <div style="flex: 1; min-width: 0">
+        <p style="margin: 0; font-weight: 700; font-size: 14px">AISI · отчёт собственнику</p>
+        <p style="margin: 0; font-size: 12px; color: #BFB3A6">Telegram · 08:00</p>
+      </div>
+      <span style="font-size: 11px; color: #9C9084">демо</span>
+    </div>
+    <p style="margin: 12px 0 0; font-size: 14px; line-height: 1.45; color: #F3EBE0">Доброе утро! За ночь 4 новые брони, на все сообщения гостей ответила.</p>
+    <div class="hx-m">
+      <div><b>78%</b><span>загрузка</span></div>
+      <div><b>$94</b><span>ср. цена</span></div>
+      <div><b>2</b><span>задачи</span></div>
+    </div>
+    <p style="margin: 12px 0 0; font-size: 13.5px; line-height: 1.45; color: #F3EBE0">Конкуренты подняли цены на выходные. Поднять делюкс до $105?</p>
+    <div style="display: flex; gap: 8px; margin-top: 10px">
+      <span style="flex: 1; text-align: center; padding: 10px 0; border-radius: 12px; background: #E2843E; color: #16110C; font-size: 13px; font-weight: 700">Применить</span>
+      <span style="flex: 1; text-align: center; padding: 10px 0; border-radius: 12px; background: rgba(255,240,220,.1); font-size: 13px; font-weight: 600">Позже</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= CRITERIA: почему отели выбирают ================= -->
+<section class="cd crit" style="margin-top: 12px">
+  <div class="w num-grid cd-pad" style="padding-top: 30px; padding-bottom: 30px">
+    <div class="num-cell">
+      <span aria-hidden="true" style="width: 42px; height: 42px; border-radius: 12px; background: rgba(226,132,62,0.16); display: grid; place-items: center; color: #E9A066"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7V3M15 7V3M7 7h10v4a5 5 0 0 1-10 0zM12 16v5"/></svg></span>
+      <p style="margin: 16px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.02em; color: #FFF8EE">Работает с вашей PMS</p>
+      <p style="margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: #BFB3A6">Подключается к PMS и channel manager, на старте только на чтение. Менять системы не нужно.</p>
+    </div>
+    <div class="num-cell">
+      <span aria-hidden="true" style="width: 42px; height: 42px; border-radius: 12px; background: rgba(226,132,62,0.16); display: grid; place-items: center; color: #E9A066"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l4 4L19 6"/></svg></span>
+      <p style="margin: 16px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.02em; color: #FFF8EE">Запуск без остановки</p>
+      <p style="margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: #BFB3A6">Анкета, перенос данных и обучение команды, пока отель работает как обычно.</p>
+    </div>
+    <div class="num-cell">
+      <span aria-hidden="true" style="width: 42px; height: 42px; border-radius: 12px; background: rgba(226,132,62,0.16); display: grid; place-items: center; color: #E9A066"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/></svg></span>
+      <p style="margin: 16px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.02em; color: #FFF8EE">Контроль у вас</p>
+      <p style="margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: #BFB3A6">Вы решаете, что AISI делает сама: уровни L1–L3. Доступа к счетам и платежам нет.</p>
+    </div>
+    <div class="num-cell">
+      <span aria-hidden="true" style="width: 42px; height: 42px; border-radius: 12px; background: rgba(226,132,62,0.16); display: grid; place-items: center; color: #E9A066"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12V4h8l10 10-8 8z"/><circle cx="7.5" cy="8.5" r="1.5"/></svg></span>
+      <p style="margin: 16px 0 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.02em; color: #FFF8EE">Цены открыты</p>
+      <p style="margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: #BFB3A6">От $790 в месяц, подключение $2 100 один раз. <a href="#pricing" style="text-decoration: underline; color: #FFF8EE">Все тарифы</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LIVE: chat + notification board ================= -->
+<section id="live" class="w sec">
+  <div class="head-row" style="margin-bottom: 28px">
+    <div>
+      <p class="ey">Живая демонстрация</p>
+      <h2 class="h2" style="max-width: 780px">Напишите AISI как гость — и смотрите, как отель реагирует</h2>
+    </div>
+    <p class="lead" style="max-width: 380px"><span class="hide-sm">Слева разговор, справа доска</span><span class="show-sm-i">Сверху разговор, ниже доска</span> уведомлений, которую видят администратор, службы и собственник. Задачи можно брать и закрывать.</p>
+  </div>
+
+  <div role="group" aria-label="Чьими глазами смотреть" class="cd role-sw" style="display: inline-flex; gap: 4px; padding: 5px; border-radius: 999px; margin-bottom: 16px">
+    <button type="button" @click="asGuest" :aria-pressed="rolePressed.guest" :style="`min-height: 44px; padding: 0 20px; border-radius: 999px; border: 0; background: ${roleBg.guest}; color: ${roleFg.guest}; font: 600 15px Inter, sans-serif; cursor: pointer`">Я гость<span class="hide-sm">, бронирую номер</span></button>
+    <button type="button" @click="asOwner" :aria-pressed="rolePressed.owner" :style="`min-height: 44px; padding: 0 20px; border-radius: 999px; border: 0; background: ${roleBg.owner}; color: ${roleFg.owner}; font: 600 15px Inter, sans-serif; cursor: pointer`">Я владелец<span class="hide-sm"> отеля</span></button>
+  </div>
+
+  <div class="live-grid">
+    <!-- chat -->
+    <div class="chat-box" style="background: #F6F0E7; color: #16110C; border-radius: 28px; height: 660px; display: flex; flex-direction: column; overflow: hidden">
+      <div class="chat-head" style="display: flex; align-items: center; gap: 12px; padding: 18px 20px; border-bottom: 1px solid #E4D8C8">
+        <span aria-hidden="true" style="width: 42px; height: 42px; border-radius: 50%; background: #16110C; display: grid; place-items: center; flex: none"><span :style="`width: 14px; height: 14px; border-radius: 50%; background: ${accent}`"></span></span>
+        <div style="flex: 1; min-width: 0">
+          <p style="margin: 0; font-weight: 700; font-size: 16px">{{chatTitle}}</p>
+          <p :style="`margin: 0; font-size: 13px; color: ${statusColor}`">{{statusText}}</p>
+        </div>
+        <button type="button" @click="reset" aria-label="Начать заново" class="reset-btn" style="min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid #D9CCBB; background: #FFFDF9; font: 600 13px Inter, sans-serif; color: #16110C; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg class="show-sm" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg><span class="hide-sm">Начать заново</span></button>
+      </div>
+
+      <div class="chat-scroll" aria-live="polite" style="flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column-reverse; gap: 8px; padding: 18px 18px 12px">
+        <template v-if="typing">
+          <div style="align-self: flex-start; display: inline-flex; gap: 5px; align-items: center; padding: 13px 16px; border-radius: 18px 18px 18px 4px; background: #FFFFFF" aria-label="AISI печатает"><span class="tdot"></span><span class="tdot"></span><span class="tdot"></span></div>
+        </template>
+        <template v-for="(m, $index) in msgsRev">
+          <p :style="`margin: 0; max-width: 84%; align-self: ${m.align}; background: ${m.bg}; border-radius: ${m.radius}; padding: 10px 14px; font-size: 15px; line-height: 1.45; color: #16110C`">{{m.text}}</p>
+        </template>
+      </div>
+
+      <div style="padding: 12px 16px 16px; border-top: 1px solid #E4D8C8; display: flex; flex-direction: column; gap: 10px">
+        <div class="chips-row" style="display: flex; gap: 6px; flex-wrap: wrap">
+          <template v-for="(c, $index) in chips">
+            <button type="button" @click="c.pick" :disabled="typing" style="min-height: 38px; padding: 0 14px; border-radius: 999px; border: 1px solid #D9CCBB; background: #FFFDF9; font: 500 14px Inter, sans-serif; color: #16110C; cursor: pointer">{{c.label}}</button>
+          </template>
+        </div>
+        <form @submit="onSubmit" style="display: flex; gap: 8px; align-items: center">
+          <label for="live-msg" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Сообщение для AISI</label>
+          <input id="live-msg" class="chat-in" type="text" :value="draft" @input="onDraft" :placeholder="placeholder" autocomplete="off" style="flex: 1; min-width: 0; min-height: 48px; padding: 0 18px; border-radius: 999px; border: 1px solid #D9CCBB; background: #FFFDF9; font: 400 15px Inter, sans-serif; color: #16110C">
+          <button type="submit" aria-label="Отправить" :disabled="typing" style="flex: none; width: 48px; height: 48px; border-radius: 50%; border: 0; background: #16110C; color: #FFF8EE; display: grid; place-items: center; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </form>
+      </div>
+    </div>
+
+    <!-- board -->
+    <div class="cd2 board-box" style="border-radius: 28px; height: 660px; display: flex; flex-direction: column; overflow: hidden; color: #FFF8EE">
+      <div class="board-pad" style="padding: 20px 22px 16px; display: flex; flex-direction: column; gap: 16px; border-bottom: 1px solid rgba(255,236,212,0.10)">
+        <div class="board-head" style="display: flex; justify-content: space-between; align-items: center; gap: 6px 12px">
+          <p class="board-title" style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em">Дашборд отеля · уведомления</p>
+          <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: #57D79A"><span style="width: 8px; height: 8px; border-radius: 50%; background: #57D79A"></span>в реальном времени</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+          <template v-for="(s, $index) in stats">
+            <div style="background: rgba(255,240,220,0.06); border-radius: 16px; padding: 12px 14px">
+              <p :style="`margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 28px; color: ${s.color}`">{{s.value}}</p>
+              <p style="margin: 2px 0 0; font-size: 12px; color: #A89B8C">{{s.label}}</p>
+            </div>
+          </template>
+        </div>
+      </div>
+
+      <div class="board-scroll board-pad" aria-live="polite" style="flex: 1; min-height: 0; overflow-y: auto; padding: 16px 22px; display: flex; flex-direction: column; gap: 10px">
+        <template v-if="noNotes">
+          <div style="margin: auto 0; text-align: center; padding: 24px; color: #A89B8C; font-size: 15px; line-height: 1.5">Пока тихо.<br>Выберите вопрос <span class="hide-sm">слева</span><span class="show-sm-i">выше</span> — события отеля появятся здесь.</div>
+        </template>
+        <template v-for="(n, $index) in notes">
+          <div class="note-in" :style="`background: rgba(255,240,220,0.05); border-radius: 18px; padding: 14px 16px; border: 1px solid ${n.border}; display: flex; flex-direction: column; gap: 8px`">
+            <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px">
+              <span :style="`font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; background: ${n.bg}; color: ${n.fg}`">{{n.role}}</span>
+              <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #A89B8C">{{n.time}}</span>
+            </div>
+            <p style="margin: 0; font-weight: 600; font-size: 16px">{{n.title}}</p>
+            <p style="margin: 0; font-size: 14px; line-height: 1.45; color: #CFC4B7">{{n.detail}}</p>
+            <template v-if="n.isTask">
+              <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 2px">
+                <span :style="`font-size: 13px; font-weight: 600; color: ${n.statusColor}`">{{n.statusLabel}}</span>
+                <template v-if="n.hasAction">
+                  <button type="button" @click="n.act" :style="`min-height: 40px; padding: 0 16px; border-radius: 999px; border: 0; background: ${n.actBg}; color: #16110C; font: 700 14px Inter, sans-serif; cursor: pointer`">{{n.actLabel}}</button>
+                </template>
+              </div>
+            </template>
+          </div>
+        </template>
+      </div>
+
+      <div class="board-pad" style="padding: 14px 22px 18px; border-top: 1px solid rgba(255,236,212,0.10)">
+        <button type="button" @click="brief" class="btn-iv" style="width: 100%; min-height: 48px">Отправить брифинг собственнику</button>
+      </div>
+    </div>
+  </div>
+  <p style="margin: 14px 0 0; font-size: 13px; color: #A89B8C">Демонстрация на заготовленных сценариях: номер, цена и время условные. Настоящая AISI отвечает по данным вашего отеля.</p>
+</section>
+
+<!-- ================= PAIN ================= -->
+<section class="w sec">
+  <div class="head-row">
+    <div>
+      <p class="ey">Где отель теряет гостей и деньги</p>
+      <h2 class="h2" style="max-width: 760px">Пять вопросов, на которые неприятно отвечать</h2>
+    </div>
+    <p class="lead" style="max-width: 360px">Если хотя бы на один нет уверенного ответа — AISI окупит себя на нём.</p>
+  </div>
+  <div class="cd cd-pad" style="padding: 8px 32px">
+    <div class="pain-row" style="padding: 26px 0; border-bottom: 1px solid rgba(255,236,212,0.10)">
+      <p class="pain-q" style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 24px; letter-spacing: -0.02em; color: #FFF8EE">Кто отвечает гостю в три часа ночи?</p>
+      <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #BFB3A6">AISI — за несколько секунд, на языке гостя, в мессенджере или по телефону.</p>
+      <span class="ring" aria-hidden="true" style="background: rgba(255,240,220,0.07); color: #FFF8EE"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+    </div>
+    <div class="pain-row" style="padding: 26px 0; border-bottom: 1px solid rgba(255,236,212,0.10)">
+      <p class="pain-q" style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 24px; letter-spacing: -0.02em; color: #FFF8EE">Сколько просьб гостей теряется между сменами?</p>
+      <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #BFB3A6">Ни одной: один чат персонала, задачи с кнопками «взял — сделал» и контроль срока.</p>
+      <span class="ring" aria-hidden="true" style="background: rgba(255,240,220,0.07); color: #FFF8EE"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+    </div>
+    <div class="pain-row" style="padding: 26px 0; border-bottom: 1px solid rgba(255,236,212,0.10)">
+      <p class="pain-q" style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 24px; letter-spacing: -0.02em; color: #FFF8EE">Сколько броней ушло из-за двойной продажи?</p>
+      <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #BFB3A6">Booking, Expedia, Airbnb и ваш сайт — один календарь без овербукинга.</p>
+      <span class="ring" aria-hidden="true" style="background: rgba(255,240,220,0.07); color: #FFF8EE"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+    </div>
+    <div class="pain-row" style="padding: 26px 0; border-bottom: 1px solid rgba(255,236,212,0.10)">
+      <p class="pain-q" style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 24px; letter-spacing: -0.02em; color: #FFF8EE">Что в маркетинге делается «на глаз»?</p>
+      <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #BFB3A6">Цены конкурентов, отзывы и отдача рекламы — в цифрах и с конкретными предложениями.</p>
+      <span class="ring" aria-hidden="true" style="background: rgba(255,240,220,0.07); color: #FFF8EE"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+    </div>
+    <div class="pain-row" style="padding: 26px 0">
+      <p class="pain-q" style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 24px; letter-spacing: -0.02em; color: #FFF8EE">Сколько часов администратор тратит на склад и бумажки?</p>
+      <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #BFB3A6">Счета и накладные — фото в чат: AISI распознаёт документ и раскладывает по статьям.</p>
+      <span class="ring" aria-hidden="true" :style="`background: ${accent}; color: #16110C`"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FEATURES (bento) ================= -->
+<section id="features" class="w sec">
+  <div class="head-row">
+    <div>
+      <p class="ey">Возможности</p>
+      <h2 class="h2">Один ИИ на весь отель</h2>
+    </div>
+    <p class="lead" style="max-width: 360px">Для гостей, для команды и для собственника — в одной системе и одном Дашборде.</p>
+  </div>
+
+  <div class="bento">
+    <!-- guests: photo card -->
+    <div class="ph" style="grid-column: span 7; min-height: 440px; display: flex; flex-direction: column; justify-content: flex-end">
+      <img class="ph-img" src="lobby.webp" alt="" style="object-position: 46% 40%">
+      <div class="ph-shade" style="background: linear-gradient(0deg, rgba(10,8,6,0.92) 0%, rgba(10,8,6,0.55) 45%, rgba(10,8,6,0.05) 80%)"></div>
+      <div class="ph-in" style="position: relative; padding: 32px; display: flex; flex-direction: column; gap: 18px">
+        <div style="display: flex; justify-content: space-between; gap: 12px; align-items: flex-start">
+          <h3 class="card-h" style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 32px; letter-spacing: -0.03em; color: #FFF8EE">Гостям</h3>
+          <span style="font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 999px; background: rgba(87,215,154,0.16); color: #7FE3B3">Работает в TiFLiS</span>
+        </div>
+        <p style="margin: 0; font-size: 17px; line-height: 1.5; color: #E2D8CB; max-width: 540px">Отвечает там, где гостю удобно, сверяет шахматку, называет цену и оформляет бронь. Уточняет рейс и трансфер, подсказывает, куда сходить, напоминает о выезде — и ещё сутки на связи после него.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px">
+          <span class="chip" style="background: #FFF8EE; color: #16110C; font-weight: 600">Русский</span>
+          <span class="chip" style="font-weight: 600">English</span>
+          <span class="chip" style="font-weight: 600">ქართული</span>
+          <span class="chip" style="font-weight: 600">Español</span>
+          <span class="chip" style="font-weight: 600">Deutsch</span>
+          <span class="chip" style="font-weight: 600">Italiano</span>
+          <span class="chip" style="font-weight: 600">Français</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- team -->
+    <div class="cd cd-pad" style="grid-column: span 5; padding: 32px; display: flex; flex-direction: column; gap: 22px">
+      <h3 class="card-h" style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 32px; letter-spacing: -0.03em; color: #FFF8EE">Команде</h3>
+      <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #BFB3A6">Администратору — эскалации, уборке — номера, рум-сервису — заказы, техслужбе — поломки. С каждым на его языке.</p>
+      <div class="cd2" style="margin-top: auto; border-radius: 20px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+        <div style="display: flex; justify-content: space-between; gap: 8px; font-size: 12px; color: #A89B8C"><span>Задача · уборка</span><span>до 14:00</span></div>
+        <p style="margin: 0; font-weight: 600; font-size: 17px; color: #FFF8EE">Номер 204: подготовить к заезду, гость просит подушки пожёстче</p>
+        <div style="display: flex; gap: 8px">
+          <button type="button" style="flex: 1; min-height: 44px; border-radius: 12px; border: 0; background: #FFF8EE; color: #16110C; font: 600 15px Inter, sans-serif">Взял</button>
+          <button type="button" :style="`flex: 1; min-height: 44px; border-radius: 12px; border: 0; background: ${accent}; color: #16110C; font: 600 15px Inter, sans-serif`">Сделал</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- owner -->
+    <div class="cd-pad" style="grid-column: span 5; background: linear-gradient(150deg, #EBA56C 0%, #D9772F 100%); color: #16110C; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; gap: 22px">
+      <h3 class="card-h" style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 32px; letter-spacing: -0.03em">Собственнику</h3>
+      <p style="margin: 0; font-size: 16px; line-height: 1.5">Каждое утро в 8:00 — брифинг в мессенджер, на почту или звонком. Раз в неделю — отчёт с предложениями: «сделайте вот это, потому что».</p>
+      <div style="margin-top: auto; background: #FFF8EE; border-radius: 20px; padding: 18px; display: flex; flex-direction: column; gap: 10px">
+        <div style="display: flex; justify-content: space-between; font-size: 12px; color: #6B5E50"><span>Брифинг · 08:00</span><span>демо-данные</span></div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #EADFD0; padding-bottom: 8px"><span style="font-size: 15px">Загрузка сегодня</span><b style="font-family: 'Inter Tight', sans-serif">78%</b></div>
+        <div style="display: flex; justify-content: space-between; border-bottom: 1px solid #EADFD0; padding-bottom: 8px"><span style="font-size: 15px">ADR · средняя цена</span><b style="font-family: 'Inter Tight', sans-serif">$94</b></div>
+        <div style="display: flex; justify-content: space-between; gap: 12px"><span style="font-size: 15px">Совет дня</span><b style="font-size: 14px; text-align: right">Поднять цену на выходные</b></div>
+      </div>
+    </div>
+
+    <!-- memory -->
+    <div class="stone cd-pad" style="grid-column: span 7; border-radius: 28px; padding: 32px; display: flex; flex-direction: column; gap: 20px">
+      <h3 class="card-h" style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 32px; letter-spacing: -0.03em">Помнит каждого гостя</h3>
+      <p class="mem-q" style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 500; font-size: 26px; line-height: 1.25; letter-spacing: -0.02em; max-width: 600px">Гость вернулся через год и написал с другого номера — AISI узнает его и продолжит разговор, а не начнёт знакомство заново.</p>
+      <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto">
+        <span class="chip" style="background: #FFFDF9; color: #16110C">тихий номер наверху</span>
+        <span class="chip" style="background: #FFFDF9; color: #16110C">поздний завтрак</span>
+        <span class="chip" style="background: #FFFDF9; color: #16110C">подушки пожёстче</span>
+        <span class="chip" style="background: #FFFDF9; color: #16110C">рассылки — только с согласия</span>
+      </div>
+    </div>
+
+    <!-- small cards -->
+    <div class="cd sm-card" style="grid-column: span 3; border-radius: 24px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #A89B8C">01</span>
+      <h3 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 20px; color: #FFF8EE">Ночной режим</h3>
+      <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #BFB3A6">Ночью разбирает прожитый день и к утру учится на ошибках.</p>
+    </div>
+    <div class="cd sm-card" style="grid-column: span 3; border-radius: 24px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #A89B8C">02 · модуль</span>
+      <h3 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 20px; color: #FFF8EE">Зрение</h3>
+      <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #BFB3A6">Видит очередь у стойки через ваши камеры. Событие, а не лицо.</p>
+    </div>
+    <div class="cd sm-card" style="grid-column: span 3; border-radius: 24px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #A89B8C">03 · модуль</span>
+      <h3 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 20px; color: #FFF8EE">Склад и поставщики</h3>
+      <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #BFB3A6">Запасы, конкурентный лист, первичка фото в чат.</p>
+    </div>
+    <div class="cd sm-card" style="grid-column: span 3; border-radius: 24px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
+      <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #A89B8C">04</span>
+      <h3 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 20px; color: #FFF8EE">Права и журнал</h3>
+      <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #BFB3A6">Кто что может — по должностям. Каждое действие записано.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW ================= -->
+<section id="how" class="w sec">
+  <p class="ey">Как работает</p>
+  <h2 class="h2" style="margin-bottom: 40px">Одна бронь — один разговор</h2>
+  <div class="how-grid">
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      <div class="how-pill" style="min-height: 120px; border-radius: 999px; background: #FFF8EE; color: #16110C; display: grid; place-items: center; text-align: center; padding: 0 16px; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 28px; letter-spacing: -0.03em">Гость пишет</div>
+      <p style="margin: 0; padding: 0 16px; font-size: 15px; line-height: 1.5; color: #BFB3A6">В Telegram, WhatsApp, по SMS, почте или звонит — на своём языке.</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      <div class="how-pill" style="min-height: 120px; border-radius: 999px; background: linear-gradient(135deg, #EBA56C, #B85E22); color: #FFF8EE; display: grid; place-items: center; text-align: center; padding: 0 16px; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 28px; letter-spacing: -0.03em">AISI подбирает</div>
+      <p style="margin: 0; padding: 0 16px; font-size: 15px; line-height: 1.5; color: #BFB3A6">Сверяет шахматку и вашу PMS, называет свободные номера и цену.</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      <div class="cd how-pill how-arrow" style="min-height: 120px; border-radius: 999px; display: grid; place-items: center; color: #FFF8EE"><svg width="64" height="40" viewBox="0 0 64 40" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h54M42 6l16 14-16 14"/></svg></div>
+      <p style="margin: 0; padding: 0 16px; font-size: 15px; line-height: 1.5; color: #BFB3A6">Собирает данные и оформляет бронь — сама или после «да» администратора.</p>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 16px">
+      <div class="stone how-pill" style="min-height: 120px; border-radius: 999px; display: grid; place-items: center; text-align: center; padding: 0 16px; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 28px; letter-spacing: -0.03em">Бронь в Дашборде</div>
+      <p style="margin: 0; padding: 0 16px; font-size: 15px; line-height: 1.5; color: #BFB3A6">Даты закрыты во всех каналах, команда в курсе, гость получил подтверждение.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LEVELS ================= -->
+<section class="w sec">
+  <div class="stone cd-pad" style="border-radius: 32px; padding: 48px 40px">
+    <div style="display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 36px">
+      <p class="ey ey-dark" style="align-self: flex-start">Уровни свободы</p>
+      <h2 class="h2 lv-h" style="color: #16110C; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.05; max-width: 760px">Сколько решает AISI, выбирает отель — и повышает уровень, когда готов</h2>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 8px">
+      <div class="lv-row" style="padding: 22px 24px; border-radius: 20px; border-bottom: 1px solid #D9CCBB">
+        <span class="lv-n" style="font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: 40px; letter-spacing: -0.03em">L1</span>
+        <span style="font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 22px">Советует</span>
+        <span style="font-size: 15px; line-height: 1.5; color: #5E554B">Подбирает вариант и передаёт администратору. Человек утверждает, AISI записывает решение и учится на нём.</span>
+        <span class="ring" aria-hidden="true" style="width: 44px; height: 44px; border: 1px solid #CDBFAD"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+      </div>
+      <div class="lv-row" :style="`padding: 22px 24px; border-radius: 20px; background: ${accent}; color: #16110C`">
+        <span class="lv-n" style="font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: 40px; letter-spacing: -0.03em">L2</span>
+        <span style="font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 22px">Ведёт операционку</span>
+        <span style="font-size: 15px; line-height: 1.5">Сама ставит брони и закрывает номера, докладывает в чат и на Дашборд. Скидки, возвраты и рекламу согласует с человеком.</span>
+        <span class="ring" aria-hidden="true" style="width: 44px; height: 44px; background: #16110C; color: #FFF8EE"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+      </div>
+      <div class="lv-row" style="padding: 22px 24px; border-radius: 20px; border-bottom: 1px solid #D9CCBB">
+        <span class="lv-n" style="font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: 40px; letter-spacing: -0.03em">L3</span>
+        <span style="font-family: 'Inter Tight', sans-serif; font-weight: 600; font-size: 22px">Работает автономно</span>
+        <span style="font-size: 15px; line-height: 1.5; color: #5E554B">Цены, скидки, апгрейды и поставщики — сама, по анализу конкурентов, сезона и спроса и строго по правилам отеля.</span>
+        <span class="ring" aria-hidden="true" style="width: 44px; height: 44px; border: 1px solid #CDBFAD"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+      </div>
+    </div>
+    <div style="margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap">
+      <span class="chip" style="gap: 8px; padding: 12px 16px; background: #FFFDF9; color: #16110C">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>
+        На любом уровне — без доступа к счетам компании и платежам
+      </span>
+      <span class="chip" style="padding: 12px 16px; background: #FFFDF9; color: #16110C">Многие начинают с L1 и через месяц переходят на L2</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section id="pricing" class="w sec">
+  <div class="head-row" style="margin-bottom: 32px">
+    <div>
+      <p class="ey">Тарифы</p>
+      <h2 class="h2">Цены без звёздочек</h2>
+      <p class="lead" style="margin-top: 14px">В месяц, без НДС. До 50 номеров — базовая цена, каждый следующий +$25.</p>
+    </div>
+    <div class="cd" style="width: 100%; max-width: 420px; border-radius: 20px; padding: 18px 20px">
+      <label for="rooms" style="display: flex; justify-content: space-between; font-size: 15px; font-weight: 600; margin-bottom: 10px; color: #FFF8EE"><span>Номеров в вашем отеле</span><span style="font-family: 'Inter Tight', sans-serif">{{rooms}}</span></label>
+      <input id="rooms" type="range" min="10" max="150" step="5" :value="rooms" @input="onRooms">
+    </div>
+  </div>
+
+  <p class="price-hint">4 тарифа — листайте вбок <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+  <div class="price-grid">
+    <div class="cd price-card" style="padding: 28px; display: flex; flex-direction: column; gap: 16px">
+      <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 14px; letter-spacing: 0.06em; color: #CDB89D">LIGHT</p>
+      <p style="margin: 0; color: #FFF8EE"><b style="font-family: 'Inter Tight', sans-serif; font-size: 44px; letter-spacing: -0.04em">{{price.light}}</b><span style="color: #A89B8C"> / мес</span></p>
+      <p style="margin: 0; font-weight: 600; min-height: 44px; color: #FFF8EE">Гости на связи круглосуточно</p>
+      <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.45; color: #BFB3A6">
+        <li>Гости в Telegram и WhatsApp на их языке</li>
+        <li>Брони и шахматка</li>
+      </ul>
+      <p style="margin: auto 0 0; padding-top: 14px; border-top: 1px solid rgba(255,236,212,0.10); display: flex; justify-content: space-between; font-size: 14px; color: #FFF8EE"><span style="color: #A89B8C">Звонки голосом</span><b>300 мин</b></p>
+    </div>
+    <div class="cd price-card" style="padding: 28px; display: flex; flex-direction: column; gap: 16px">
+      <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 14px; letter-spacing: 0.06em; color: #CDB89D">STANDARD</p>
+      <p style="margin: 0; color: #FFF8EE"><b style="font-family: 'Inter Tight', sans-serif; font-size: 44px; letter-spacing: -0.04em">{{price.standard}}</b><span style="color: #A89B8C"> / мес</span></p>
+      <p style="margin: 0; font-weight: 600; min-height: 44px; color: #FFF8EE">Плюс цифры отеля</p>
+      <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.45; color: #BFB3A6">
+        <li>Всё из Light</li>
+        <li>Цифры отеля и склад</li>
+        <li>Модуль брони на вашем сайте без комиссии</li>
+      </ul>
+      <p style="margin: auto 0 0; padding-top: 14px; border-top: 1px solid rgba(255,236,212,0.10); display: flex; justify-content: space-between; font-size: 14px; color: #FFF8EE"><span style="color: #A89B8C">Звонки голосом</span><b>400 мин</b></p>
+    </div>
+    <div class="price-card" style="background: #FFF8EE; color: #16110C; border-radius: 28px; padding: 28px; display: flex; flex-direction: column; gap: 16px; box-shadow: 0 30px 70px rgba(0,0,0,0.35)">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px">
+        <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 14px; letter-spacing: 0.06em; color: #B85E22">MAX</p>
+        <span :style="`font-size: 12px; font-weight: 700; padding: 5px 10px; border-radius: 999px; background: ${accent}; color: #16110C`">Чаще выбирают</span>
+      </div>
+      <p style="margin: 0"><b style="font-family: 'Inter Tight', sans-serif; font-size: 44px; letter-spacing: -0.04em">{{price.max}}</b><span style="color: #6B5E50"> / мес</span></p>
+      <p style="margin: 0; font-weight: 600; min-height: 44px">AISI видит весь отель и подсказывает, решаете вы</p>
+      <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.45; color: #4A4037">
+        <li>Память о гостях и забота после выезда</li>
+        <li>Задачи сотрудникам, кадры и смены</li>
+        <li>Каналы продаж без овербукинга</li>
+        <li>Аналитика, прогноз, конкуренты, отзывы</li>
+        <li>Бухгалтерский учёт</li>
+      </ul>
+      <p style="margin: auto 0 0; padding-top: 14px; border-top: 1px solid #EADFD0; display: flex; justify-content: space-between; font-size: 14px"><span style="color: #6B5E50">Звонки голосом</span><b>1 800 мин</b></p>
+    </div>
+    <div class="cd price-card" style="padding: 28px; display: flex; flex-direction: column; gap: 16px">
+      <p style="margin: 0; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 14px; letter-spacing: 0.06em; color: #CDB89D">EXPERT</p>
+      <p style="margin: 0; color: #FFF8EE"><b style="font-family: 'Inter Tight', sans-serif; font-size: 44px; letter-spacing: -0.04em">{{price.expert}}</b><span style="color: #A89B8C"> / мес</span></p>
+      <p style="margin: 0; font-weight: 600; min-height: 44px; color: #FFF8EE">AISI сама приносит деньги — по вашим правилам</p>
+      <ul style="margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.45; color: #BFB3A6">
+        <li>Цены по вашим правилам, маркетинг под ключ</li>
+        <li>Полный финансовый анализ</li>
+        <li>Утренний брифинг и недельный отчёт</li>
+        <li>Личный советник собственника</li>
+        <li>Сеть отелей в одном окне</li>
+      </ul>
+      <p style="margin: auto 0 0; padding-top: 14px; border-top: 1px solid rgba(255,236,212,0.10); display: flex; justify-content: space-between; font-size: 14px; color: #FFF8EE"><span style="color: #A89B8C">Звонки голосом</span><b>2 500 мин</b></p>
+    </div>
+  </div>
+  <div style="margin-top: 20px; display: flex; flex-wrap: wrap; gap: 8px">
+    <span class="chip">Подключение — <b style="margin-left: 4px; color: #FFF8EE">$2 100</b>&nbsp;один раз</span>
+    <span class="chip">Минута сверх пакета — $0,35</span>
+    <span class="chip">Сообщения WhatsApp — по тарифу Meta</span>
+  </div>
+</section>
+
+<!-- ================= ONBOARDING + CASE ================= -->
+<section id="onboarding" class="w sec">
+  <div class="bento">
+    <div class="cd cd-pad" style="grid-column: span 7; padding: 36px; display: flex; flex-direction: column; gap: 24px">
+      <p class="ey" style="margin: 0">Внедрение</p>
+      <h2 class="h2" style="font-size: clamp(30px, 3vw, 44px); line-height: 1.05">Запуск без остановки отеля</h2>
+      <ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px">
+        <li style="display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(255,236,212,0.10)">
+          <span style="width: 36px; height: 36px; border-radius: 10px; background: #FFF8EE; color: #16110C; display: grid; place-items: center; font: 700 15px 'Inter Tight', sans-serif">1</span>
+          <span><b style="display: block; font-size: 17px; margin-bottom: 4px; color: #FFF8EE">Анкета отеля</b><span style="font-size: 15px; color: #BFB3A6">Должности и правила — из них AISI собирает свою матрицу прав.</span></span>
+        </li>
+        <li style="display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(255,236,212,0.10)">
+          <span style="width: 36px; height: 36px; border-radius: 10px; background: #FFF8EE; color: #16110C; display: grid; place-items: center; font: 700 15px 'Inter Tight', sans-serif">2</span>
+          <span><b style="display: block; font-size: 17px; margin-bottom: 4px; color: #FFF8EE">Плавный старт</b><span style="font-size: 15px; color: #BFB3A6">Подключаемся к вашей PMS и channel manager только на чтение: вы работаете как привыкли.</span></span>
+        </li>
+        <li style="display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 16px; padding: 14px 0; border-bottom: 1px solid rgba(255,236,212,0.10)">
+          <span style="width: 36px; height: 36px; border-radius: 10px; background: #FFF8EE; color: #16110C; display: grid; place-items: center; font: 700 15px 'Inter Tight', sans-serif">3</span>
+          <span><b style="display: block; font-size: 17px; margin-bottom: 4px; color: #FFF8EE">Обучение команды и пилот</b><span style="font-size: 15px; color: #BFB3A6">Сотрудники работают с AISI в чате и на Дашборде, вы выбираете уровень свободы.</span></span>
+        </li>
+        <li style="display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 16px; padding: 14px 0">
+          <span :style="`width: 36px; height: 36px; border-radius: 10px; background: ${accent}; color: #16110C; display: grid; place-items: center; font: 700 15px 'Inter Tight', sans-serif`">4</span>
+          <span><b style="display: block; font-size: 17px; margin-bottom: 4px; color: #FFF8EE">Полная работа</b><span style="font-size: 15px; color: #BFB3A6">Брони в Дашборде AISI, перенос в вашу систему — или отказ от неё.</span></span>
+        </li>
+      </ol>
+      <p style="margin: 0; font-size: 15px; color: #A89B8C">Подключение — $2 100 один раз. Срок зависит от ваших данных и подключений.</p>
+    </div>
+
+    <div class="ph" style="grid-column: span 5; min-height: 560px; display: flex; flex-direction: column; justify-content: flex-end; color: #FFF8EE">
+      <img class="ph-img" src="lobby.webp" alt="" style="object-position: 88% 50%">
+      <div class="ph-shade" style="background: linear-gradient(0deg, rgba(10,8,6,0.95) 0%, rgba(10,8,6,0.75) 48%, rgba(10,8,6,0.15) 85%)"></div>
+      <div class="ph-in" style="position: relative; padding: 32px; display: flex; flex-direction: column; gap: 18px">
+        <div style="display: flex; gap: 8px; flex-wrap: wrap">
+          <span class="chip" style="font-size: 13px">Пилотный отель</span>
+          <span class="chip" style="font-size: 13px">Тбилиси</span>
+        </div>
+        <h3 class="case-h" style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 40px; line-height: 1; letter-spacing: -0.035em">В TiFLiS её зовут Мария</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.5; color: #E2D8CB">В вашем отеле имя, характер и навыки AISI выбираете вы. В TiFLiS уже каждый день:</p>
+        <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px">
+          <li style="display: flex; gap: 10px; align-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#57D79A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>чат персонала с эскалациями и задачами</li>
+          <li style="display: flex; gap: 10px; align-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#57D79A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>гости заказывают трансфер через бота</li>
+          <li style="display: flex; gap: 10px; align-items: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#57D79A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"/></svg>утренний брифинг собственнику и команде</li>
+        </ul>
+        <a href="#live" @click="asGuest" class="btn-iv" style="justify-content: space-between; padding: 0 6px 0 22px; min-height: 52px; margin-top: 6px">
+          Поговорить с Марией
+          <span :style="`width: 40px; height: 40px; border-radius: 50%; background: ${accent}; display: grid; place-items: center`"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#16110C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section id="faq" class="w sec">
+  <div class="bento">
+    <div style="grid-column: span 4">
+      <p class="ey">Вопросы</p>
+      <h2 class="h2">Что обычно спрашивают отели</h2>
+    </div>
+    <div class="cd cd-pad" style="grid-column: span 8; padding: 8px 28px">
+      <template v-for="(item, $index) in faqs">
+        <div :style="`border-bottom: ${item.border}`">
+          <button type="button" @click="item.toggle" :aria-expanded="item.expanded" class="faq-q" style="width: 100%; min-height: 72px; display: flex; justify-content: space-between; align-items: center; gap: 16px; border: 0; background: transparent; padding: 18px 0; text-align: left; cursor: pointer; color: #FFF8EE; font: 600 19px 'Inter Tight', sans-serif">
+            <span>{{item.q}}</span>
+            <span aria-hidden="true" style="flex: none; width: 40px; height: 40px; border-radius: 50%; background: rgba(255,240,220,0.07); display: grid; place-items: center; font: 500 22px Inter, sans-serif">{{item.sign}}</span>
+          </button>
+          <template v-if="item.open">
+            <p class="faq-a" style="margin: 0; padding: 0 56px 22px 0; font-size: 16px; line-height: 1.55; color: #BFB3A6">{{item.a}}</p>
+          </template>
+        </div>
+      </template>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA + FOOTER ================= -->
+<section id="demo" class="w sec" style="padding-bottom: 12px">
+  <div class="demo-grid">
+    <div class="ph demo-ph" style="min-height: 480px; display: flex; flex-direction: column; justify-content: flex-end; color: #FFF8EE">
+      <img class="ph-img" src="lobby.webp" alt="" style="object-position: 55% 70%">
+      <div class="ph-shade" style="background: linear-gradient(0deg, rgba(10,8,6,0.9) 0%, rgba(10,8,6,0.4) 55%, rgba(10,8,6,0.1) 100%)"></div>
+      <div class="ph-in" style="position: relative; padding: 36px; display: flex; flex-direction: column; gap: 16px">
+        <h2 class="h2">Покажем AISI на примере вашего отеля</h2>
+        <p style="margin: 0; font-size: 17px; line-height: 1.5; color: #E2D8CB; max-width: 480px">Оставьте контакт — разберём ваши каналы, номера и команду и покажем, с какого уровня свободы начать.</p>
+        <a href="#live" @click="asGuest" style="align-self: flex-start; font-size: 15px; font-weight: 600; border-bottom: 1px solid currentColor; padding-bottom: 2px">Или поговорите с AISI прямо сейчас&nbsp;↗</a>
+      </div>
+    </div>
+    <form class="stone cd-pad" style="border-radius: 28px; padding: 36px; display: flex; flex-direction: column; gap: 14px; justify-content: center">
+      <p style="margin: 0 0 6px; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 26px; letter-spacing: -0.02em">Записаться на демо</p>
+      <label class="fld">Имя
+        <input type="text" placeholder="Как к вам обращаться">
+      </label>
+      <label class="fld">Отель и число номеров
+        <input type="text" placeholder="Например: Old Town Hotel, 40 номеров">
+      </label>
+      <label class="fld">Телефон, Telegram или почта
+        <input type="text" placeholder="Куда ответить">
+      </label>
+      <button type="button" style="min-height: 56px; border-radius: 999px; border: 0; background: #16110C; color: #FFF8EE; font: 700 17px Inter, sans-serif; cursor: pointer; margin-top: 4px">Записаться на демо</button>
+      <p style="margin: 0; font-size: 13px; color: #5E554B">Макет: форма пока не отправляет. На сайте она будет передавать заявку в Telegram команды.</p>
+    </form>
+  </div>
+
+  <footer class="cd" style="margin-top: 12px; border-radius: 32px 32px 0 0; padding: 36px 40px 0; overflow: hidden; border-bottom: 0">
+    <div style="display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; font-size: 14px; color: #BFB3A6">
+      <div style="display: flex; flex-direction: column; gap: 6px">
+        <b style="color: #FFF8EE">AISI HOTEL</b>
+        <span>Первая модель лаборатории AISI LAB</span>
+        <span>OPERIVA · Тбилиси, Грузия</span>
+      </div>
+      <nav aria-label="Подвал" style="display: flex; gap: 20px; flex-wrap: wrap">
+        <a href="#features">Возможности</a>
+        <a href="#pricing">Тарифы</a>
+        <a href="#onboarding">Внедрение</a>
+        <a href="#faq">Вопросы</a>
+        <a href="https://operiva.tech/">operiva.tech</a>
+      </nav>
+    </div>
+    <p class="foot-word" aria-hidden="true">AISI HOTEL</p>
+  </footer>
+</section>
+
+<!-- ================= MOBILE ACTION BAR ================= -->
+<div :class="barCls" role="region" aria-label="Быстрые действия">
+  <a href="#live" @click="asGuest" class="mbar-ghost">Поговорить с AISI</a>
+  <a href="#demo" class="btn-iv mbar-main">Записаться на демо</a>
+</div>
+
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@3.4.38/dist/vue.global.prod.js"></script>
+<script>
+class DCLogic {
+  constructor(props) { this.props = props || {}; this.state = {}; }
+  setState(u) {
+    const next = typeof u === 'function' ? u(this.state) : u;
+    this.state = Object.assign({}, this.state, next);
+    if (this.__update) this.__update();
+  }
+  forceUpdate() { if (this.__update) this.__update(); }
+}
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.timers = [];
+    this.seq = 0;
+    this.state = Object.assign({ rooms: 40, open: 0, role: 'guest' }, this.freshChat('guest'));
+  }
+
+  setRole(role) {
+    if (role === this.state.role) return;
+    this.clearTimers();
+    this.setState(Object.assign({ role: role }, this.freshChat(role)));
+  }
+
+  componentDidMount() {
+    var self = this;
+    // phone action bar: shown after the first screen, hidden over the live demo and the demo form
+    this.onScroll = function () {
+      var vh = window.innerHeight || 800;
+      var live = document.getElementById('live');
+      var demo = document.getElementById('demo');
+      var lr = live ? live.getBoundingClientRect() : null;
+      var inLive = lr ? (lr.top < vh * 0.55 && lr.bottom > vh * 0.45) : false;
+      var nearEnd = demo ? demo.getBoundingClientRect().top < vh * 0.9 : false;
+      var on = (window.scrollY || 0) > 640 && !inLive && !nearEnd;
+      if (on !== !!self.state.bar) self.setState({ bar: on });
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+  }
+  componentWillUnmount() {
+    this.clearTimers();
+    if (this.onScroll) window.removeEventListener('scroll', this.onScroll);
+  }
+  clearTimers() { this.timers.forEach(function (t) { clearTimeout(t); }); this.timers = []; }
+  later(fn, ms) { var t = setTimeout(fn, ms); this.timers.push(t); }
+
+  freshChat(role) {
+    var owner = role === 'owner';
+    return {
+      msgs: [{ id: 'm0', from: 'ai', text: owner
+        ? 'Доброе утро! Я AISI, ваш советник. Спросите про загрузку, деньги, цены или команду — отвечу цифрами.'
+        : 'Здравствуйте! Я AISI, помощник отеля. Чем помочь? Выберите вопрос ниже или напишите своими словами.' }],
+      notes: [],
+      typing: false,
+      draft: '',
+      chips: owner ? ['brief', 'revenue', 'prices', 'staff'] : ['book', 'transfer', 'ac', 'es'],
+      lastKey: null,
+      lastNoteId: null
+    };
+  }
+
+  scenarios() {
+    return {
+      book: {
+        chip: 'Нужен номер на выходные', guest: 'Здравствуйте! Нужен номер на двоих на выходные',
+        ai: 'Есть делюкс с балконом: две ночи — 180 $, завтрак включён. Забронировать на ваше имя?',
+        notes: [{ role: 'res', title: 'Подобран вариант для гостя', detail: 'Делюкс с балконом · 2 ночи · ждём подтверждения' }],
+        next: ['bookYes', 'city', 'es']
+      },
+      bookYes: {
+        chip: 'Да, бронируйте', guest: 'Да, бронируйте',
+        ai: 'Готово, бронь подтверждена! Накануне напомню о заезде. Нужен трансфер из аэропорта?',
+        notes: [
+          { role: 'res', title: 'Бронь создана', detail: 'Делюкс с балконом · 2 ночи · 180 $ · запись в шахматке', booking: true },
+          { role: 'chan', title: 'Даты закрыты во всех каналах', detail: 'Booking, Expedia, Airbnb и сайт — без овербукинга' },
+          { role: 'house', title: 'Подготовить номер к заезду', detail: 'Делюкс с балконом · гость просит подушки пожёстче', task: true, follow: 'Номер для вас уже готовят: подушки пожёстче, как вы просили в прошлый раз.' }
+        ],
+        next: ['transfer', 'ac', 'city']
+      },
+      transfer: {
+        chip: 'Закажите трансфер', guest: 'Нужен трансфер из аэропорта',
+        ai: 'Конечно. Каким рейсом прилетаете и сколько вас будет?',
+        notes: [],
+        next: ['transferInfo']
+      },
+      transferInfo: {
+        chip: 'Рейс в 14:30, нас двое', guest: 'Рейс в 14:30, нас двое, два чемодана',
+        ai: 'Записала. В зале прилёта вас встретит водитель отеля. Напомню о трансфере за день до прилёта.',
+        notes: [
+          { role: 'admin', title: 'Трансфер из аэропорта', detail: 'Прилёт 14:30 · 2 гостя · 2 чемодана · назначить водителя', task: true, follow: 'Водитель назначен: встретит вас в 14:30 у выхода из зоны прилёта с табличкой отеля.' },
+          { role: 'mem', title: 'Напоминание запланировано', detail: 'Гостю — за сутки до прилёта, в его мессенджер' }
+        ],
+        next: ['ac', 'city', 'es']
+      },
+      ac: {
+        chip: 'Не работает кондиционер', guest: 'В номере 204 не работает кондиционер',
+        ai: 'Простите за неудобство! Передала техслужбе, мастер уже получил задачу. Напишу, как только всё починят.',
+        notes: [
+          { role: 'tech', title: 'Номер 204: не работает кондиционер', detail: 'Срочно · жалоба гостя', task: true, follow: 'Мастер закончил: кондиционер работает. Если что-то не так — напишите, пришлю его снова.' },
+          { role: 'admin', title: 'Контроль срока', detail: 'Если задачу не возьмут за 10 минут — подниму выше, директору' }
+        ],
+        next: ['city', 'es', 'book']
+      },
+      city: {
+        chip: 'Что посмотреть вечером?', guest: 'Что посмотреть в городе вечером?',
+        ai: 'Старый город и серные бани — в десяти минутах пешком, а на закат — канатная дорога к крепости Нарикала. Собрать маршрут на завтра под ваши интересы?',
+        notes: [{ role: 'mem', title: 'Память о госте', detail: 'Интересы: прогулки и виды на город — учту в следующий приезд' }],
+        next: ['es', 'ac', 'book']
+      },
+      es: {
+        chip: 'Hola, ¿desayuno?', guest: 'Hola, ¿a qué hora es el desayuno?',
+        ai: '¡Hola! El desayuno se sirve de 8:00 a 11:00 en el restaurante. ¿Le reservo una mesa junto a la ventana?',
+        notes: [{ role: 'mem', title: 'Язык гостя: испанский', detail: 'Отвечаю на языке гостя и запомнила его для следующих сообщений' }],
+        next: ['book', 'city', 'ac']
+      },
+
+      // ——— собственник ———
+      brief: {
+        chip: 'Что сегодня в отеле?', guest: 'Доброе утро. Что сегодня в отеле?',
+        ai: 'Доброе утро! Занято 31 номер из 40, сегодня заезжают 6 гостей, выезжают 4. Ночью пришла одна бронь на сегодня — номер держу, администратор в курсе. Жалоб нет.',
+        notes: [
+          { role: 'owner', title: 'Утренний брифинг', detail: 'Загрузка 78% · заездов 6 · выездов 4 · жалоб 0' },
+          { role: 'house', title: 'Подготовить 6 номеров к заезду', detail: 'До 14:00 · список номеров в задаче', task: true, follow: 'Уборка закончила: все 6 номеров к заезду готовы.' }
+        ],
+        next: ['revenue', 'prices', 'staff']
+      },
+      revenue: {
+        chip: 'Сколько заработали за неделю?', guest: 'Сколько мы заработали за неделю и почему?',
+        ai: 'За неделю — 11 840 $ на номерах, на 6% меньше прошлой недели: отменились две брони на выходные. Средняя цена номера — 94 $, доход на номер — 78 $.',
+        notes: [
+          { role: 'owner', title: 'Доход за неделю: 11 840 $', detail: 'ADR 94 $ · RevPAR 78 $ · −6% к прошлой неделе' },
+          { role: 'res', title: 'Потери на отменах', detail: '2 брони на выходные · предлагаю правило предоплаты' }
+        ],
+        next: ['prices', 'reviews', 'staff']
+      },
+      prices: {
+        chip: 'Что с ценами на выходные?', guest: 'Что посоветуешь с ценами на выходные?',
+        ai: 'Конкуренты рядом подняли цены на выходные на 10–15%, у нас осталось 6 номеров. Предлагаю поднять делюкс со 94 до 105 $. Применить?',
+        notes: [{ role: 'chan', title: 'Цены конкурентов на выходные', detail: '4 отеля рядом · рост 10–15% · у нас свободно 6 номеров' }],
+        next: ['pricesYes', 'revenue', 'reviews']
+      },
+      pricesYes: {
+        chip: 'Да, применяй', guest: 'Да, применяй',
+        ai: 'Готово: делюкс на субботу и воскресенье — 105 $, обновила во всех каналах. В понедельник покажу, как это сказалось на доходе.',
+        notes: [
+          { role: 'chan', title: 'Цены обновлены во всех каналах', detail: 'Делюкс · сб–вс · 94 $ → 105 $ · Booking, Expedia, Airbnb, сайт' },
+          { role: 'owner', title: 'Решение записано в журнал', detail: 'Изменение цены · утвердил собственник', decision: true }
+        ],
+        next: ['staff', 'reviews', 'revenue']
+      },
+      staff: {
+        chip: 'Как работала команда?', guest: 'Как вчера работала команда?',
+        ai: 'Вчера закрыто 23 задачи из 24. Ремонт душа в 308 перенесён на утро — мастер уже получил задачу. Уборка в среднем реагировала за 12 минут.',
+        notes: [{ role: 'tech', title: 'Номер 308: ремонт душа', detail: 'Перенесено со вчера · контролирую срок', task: true }],
+        next: ['reviews', 'prices', 'brief']
+      },
+      reviews: {
+        chip: 'Что пишут в отзывах?', guest: 'Что пишут гости в отзывах?',
+        ai: 'За неделю пять новых отзывов, средняя оценка 4,7. Дважды хвалят завтрак, один раз жалуются на шум с улицы в 205 — предлагаю не селить туда гостей, которые просили тихий номер.',
+        notes: [{ role: 'mem', title: 'Правило для бронирования', detail: 'Номер 205 не предлагать гостям, которые просят тихий номер', decision: true }],
+        next: ['brief', 'revenue', 'prices']
+      }
+    };
+  }
+
+  roles() {
+    var accent = this.props.accent ?? '#E2843E';
+    return {
+      res: { label: 'Брони', bg: '#8FB0FF', fg: '#16110C' },
+      chan: { label: 'Каналы продаж', bg: '#B49CFF', fg: '#0D0E10' },
+      house: { label: 'Уборка', bg: '#3DD68C', fg: '#0D0E10' },
+      tech: { label: 'Техслужба', bg: '#FFC233', fg: '#0D0E10' },
+      admin: { label: 'Администратор', bg: '#FFF8EE', fg: '#16110C' },
+      mem: { label: 'Память AISI', bg: '#7FD3FF', fg: '#0D0E10' },
+      owner: { label: 'Собственник', bg: accent, fg: '#0D0E10' }
+    };
+  }
+
+  now() { var d = new Date(); return ('0' + d.getHours()).slice(-2) + ':' + ('0' + d.getMinutes()).slice(-2); }
+
+  match(text) {
+    var t = text.toLowerCase();
+    if (this.state.role === 'owner') {
+      if (this.state.lastKey === 'prices' && /^(да|ок|давай|примен|поднима)/.test(t)) return 'pricesYes';
+      if (/брифинг|сегодня|утро|загрузк|заезд/.test(t)) return 'brief';
+      if (/заработ|доход|выручк|деньг|прибыл|adr|revpar/.test(t)) return 'revenue';
+      if (/цен|выходн|конкурент|тариф/.test(t)) return 'prices';
+      if (/команд|персонал|сотрудник|смен|задач/.test(t)) return 'staff';
+      if (/отзыв|оценк|рейтинг|жалоб/.test(t)) return 'reviews';
+      return null;
+    }
+    if (this.state.lastKey === 'book' && /^(да|ок|хорошо|давайте|бронир)/.test(t)) return 'bookYes';
+    if (this.state.lastKey === 'transfer' && /\d/.test(t)) return 'transferInfo';
+    if (/брон|номер на|свободн|выходн|переноч|заселен/.test(t)) return 'book';
+    if (/трансфер|такси|аэропорт|машин|встрет/.test(t)) return 'transfer';
+    if (/кондиц|не работает|слома|душ|свет|холодно|жарко|протека|шум/.test(t)) return 'ac';
+    if (/город|посмотр|куда сход|ресторан|экскурс|погулять/.test(t)) return 'city';
+    if (/hola|desayuno|¿|gracias/.test(t)) return 'es';
+    return null;
+  }
+
+  addNote(n) {
+    var id = 'n' + (++this.seq);
+    var note = Object.assign({ id: id, time: this.now(), status: n.task ? 'new' : null }, n);
+    this.setState(function (s) { return { notes: [note].concat(s.notes), lastNoteId: id }; });
+  }
+
+  send(text, key) {
+    if (this.state.typing) return;
+    var self = this;
+    var sc = key ? this.scenarios()[key] : null;
+    var guestText = text || (sc && sc.guest);
+    if (!guestText) return;
+    this.setState(function (s) {
+      return { msgs: s.msgs.concat([{ id: 'g' + (++self.seq), from: 'guest', text: guestText }]), typing: true, draft: '', chips: [] };
+    });
+    var owner = this.state.role === 'owner';
+    var reply = sc ? sc.ai : owner
+      ? 'Соберу цифры по этому вопросу и пришлю в утреннем брифинге. В демонстрации я отвечаю про загрузку, доход, цены, команду и отзывы.'
+      : 'Хороший вопрос! Чтобы не ошибиться, передала его администратору — он ответит здесь же в течение нескольких минут.';
+    var notes = sc ? sc.notes : owner
+      ? [{ role: 'owner', title: 'Вопрос в утренний брифинг', detail: '«' + guestText.slice(0, 90) + '» · отвечу с расчётом завтра в 08:00' }]
+      : [{ role: 'admin', title: 'Вопрос гостя: ответит человек', detail: '«' + guestText.slice(0, 90) + '» · AISI не уверена в ответе и не гадает', task: true, follow: 'Администратор на связи: уточнил ваш вопрос и скоро ответит подробно.' }];
+    var next = sc ? sc.next : owner ? ['brief', 'revenue', 'prices', 'reviews'] : ['book', 'transfer', 'ac', 'city'];
+    var delay = Math.min(1900, 700 + reply.length * 8);
+    this.later(function () {
+      self.setState(function (s) {
+        return { msgs: s.msgs.concat([{ id: 'a' + (++self.seq), from: 'ai', text: reply }]), typing: false, chips: next, lastKey: key };
+      });
+      notes.forEach(function (n, i) { self.later(function () { self.addNote(n); }, 350 + i * 650); });
+    }, delay);
+  }
+
+  advance(id) {
+    var self = this;
+    var target = null;
+    var notes = this.state.notes.map(function (n) {
+      if (n.id !== id) return n;
+      var status = n.status === 'new' ? 'work' : 'done';
+      target = Object.assign({}, n, { status: status });
+      return target;
+    });
+    this.setState({ notes: notes });
+    if (target && target.status === 'done' && target.follow) {
+      this.setState({ typing: true });
+      this.later(function () {
+        self.setState(function (s) {
+          return { msgs: s.msgs.concat([{ id: 'a' + (++self.seq), from: 'ai', text: target.follow }]), typing: false };
+        });
+      }, 1100);
+    }
+  }
+
+  sendBrief() {
+    var notes = this.state.notes;
+    var b = notes.filter(function (n) { return n.booking; }).length;
+    var tasks = notes.filter(function (n) { return n.task; });
+    var done = tasks.filter(function (n) { return n.status === 'done'; }).length;
+    var answers = this.state.msgs.filter(function (m) { return m.from === 'ai'; }).length - 1;
+    var decisions = notes.filter(function (n) { return n.decision; }).length;
+    var owner = this.state.role === 'owner';
+    var detail = answers <= 0
+      ? 'Пока тихо: задайте AISI вопрос, и в брифинге появятся цифры.'
+      : owner
+        ? 'Итог: решений — ' + decisions + ', задач — ' + tasks.length + ', закрыто — ' + done + '. Каждое решение записано в журнал: кто, когда и почему.'
+        : 'За сессию: броней — ' + b + ', задач — ' + tasks.length + ', закрыто — ' + done + ', ответов гостю — ' + answers + '. Отвечала за секунды, без пропущенных сообщений.';
+    this.addNote({ role: 'owner', title: 'Брифинг собственнику отправлен', detail: detail });
+  }
+
+  renderVals() {
+    var self = this;
+    var accent = this.props.accent ?? '#E2843E';
+    var sc = this.scenarios();
+    var roles = this.roles();
+    var st = this.state;
+    var msgsRev = st.msgs.map(function (m) {
+      var guest = m.from === 'guest';
+      return { id: m.id, text: m.text, align: guest ? 'flex-end' : 'flex-start', bg: guest ? '#F1D9C4' : '#FFFFFF', radius: guest ? '18px 18px 4px 18px' : '18px 18px 18px 4px' };
+    }).reverse();
+    var chips = st.chips.map(function (k) { return { label: sc[k].chip, pick: function () { self.send(null, k); } }; });
+    var notes = st.notes.map(function (n) {
+      var r = roles[n.role];
+      var isTask = !!n.task;
+      var label = !isTask ? '' : n.status === 'new' ? 'Новая задача' : n.status === 'work' ? 'В работе' : 'Выполнено';
+      return {
+        id: n.id, role: r.label, bg: r.bg, fg: r.fg, time: n.time, title: n.title, detail: n.detail,
+        border: n.id === st.lastNoteId ? accent : 'rgba(255,236,212,0.08)',
+        isTask: isTask,
+        hasAction: isTask && n.status !== 'done',
+        statusLabel: label,
+        statusColor: n.status === 'done' ? '#57D79A' : n.status === 'work' ? '#F2C46B' : '#CFC4B7',
+        actLabel: n.status === 'new' ? 'Взять в работу' : 'Готово',
+        actBg: n.status === 'new' ? '#FFF8EE' : accent,
+        act: function () { self.advance(n.id); }
+      };
+    });
+    var owner = st.role === 'owner';
+    var openTasks = st.notes.filter(function (n) { return n.task && n.status !== 'done'; }).length;
+    var aiAnswers = Math.max(0, st.msgs.filter(function (m) { return m.from === 'ai'; }).length - 1);
+    var stats = owner
+      ? [
+          { value: st.notes.length ? '78%' : '—', label: 'загрузка сегодня', color: '#FFF8EE' },
+          { value: String(openTasks), label: 'задач в работе', color: accent },
+          { value: String(st.notes.filter(function (n) { return n.decision; }).length), label: 'решений принято', color: '#FFF8EE' }
+        ]
+      : [
+          { value: String(st.notes.filter(function (n) { return n.booking; }).length), label: 'броней создано', color: '#FFF8EE' },
+          { value: String(openTasks), label: 'задач в работе', color: accent },
+          { value: String(aiAnswers), label: 'ответов гостю', color: '#FFF8EE' }
+        ];
+    var liveVals = {
+      role: st.role,
+      chatTitle: owner ? 'AISI · советник собственника' : 'AISI · ваш отель',
+      placeholder: owner ? 'Спросите про деньги, цены или команду…' : 'Напишите своими словами…',
+      asGuest: function () { self.setRole('guest'); },
+      asOwner: function () { self.setRole('owner'); },
+      rolePressed: { guest: owner ? 'false' : 'true', owner: owner ? 'true' : 'false' },
+      roleBg: { guest: owner ? 'transparent' : '#FFF8EE', owner: owner ? '#FFF8EE' : 'transparent' },
+      roleFg: { guest: owner ? '#E9DFD2' : '#16110C', owner: owner ? '#16110C' : '#E9DFD2' },
+      msgsRev: msgsRev,
+      chips: chips,
+      notes: notes,
+      noNotes: notes.length === 0,
+      typing: st.typing,
+      statusText: st.typing ? 'печатает…' : 'онлайн, отвечает за секунды',
+      statusColor: st.typing ? '#6B5E50' : '#2E7D52',
+      draft: st.draft,
+      onDraft: function (e) { self.setState({ draft: e.target.value }); },
+      onSubmit: function (e) { e.preventDefault(); var t = (self.state.draft || '').trim(); if (!t) return; self.send(t, self.match(t)); },
+      reset: function () { self.clearTimers(); self.setState(self.freshChat(self.state.role)); },
+      brief: function () { self.sendBrief(); },
+      stats: stats,
+      barCls: st.bar ? 'mbar on' : 'mbar'
+    };
+    return Object.assign(liveVals, this.pageVals());
+  }
+
+  pageVals() {
+    var rooms = this.state.rooms;
+    var extra = Math.max(0, rooms - 50) * 25;
+    var fmt = function (n) { return '$' + String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' '); };
+    var self = this;
+    var data = [
+      ['Это чат-бот?', 'Нет. Чат-бот отвечает по сценарию. AISI помнит гостей, работает с шахматкой и вашей PMS, ставит задачи персоналу и отчитывается собственнику — как сотрудник, а не окно с кнопками.'],
+      ['Может ли AISI провести платёж?', 'Нет. К счетам компании у AISI нет доступа ни на одном уровне: она следит за сроками оплат и напоминает, а платит человек.'],
+      ['Нужно ли менять нашу PMS и channel manager?', 'Нет. На старте AISI подключается к ним только на чтение. Свой channel manager включается, когда команда готова, — или не включается вовсе.'],
+      ['На каких языках она говорит?', 'Грузинский, английский, русский, испанский, немецкий, итальянский и французский — голосом и текстом. Нужен другой — отель включает любой.'],
+      ['Что с данными гостей?', 'Личные данные хранятся по правилам отеля и закона, каждый доступ к документам гостя записан в журнал. Поздравления и акции — только если гость согласился.'],
+      ['Сколько длится подключение?', 'Срок зависит от ваших данных и подключений: анкета, перенос и сверка данных, обучение команды, пилот. Стоимость — $2 100 один раз.']
+    ];
+    var faqs = data.map(function (x, i) {
+      var open = self.state.open === i;
+      return {
+        q: x[0], a: x[1], open: open, sign: open ? '−' : '+', expanded: open ? 'true' : 'false',
+        border: i === data.length - 1 ? '0' : '1px solid rgba(255,236,212,0.10)',
+        toggle: function () { self.setState({ open: open ? -1 : i }); }
+      };
+    });
+    return {
+      accent: this.props.accent ?? '#E2843E',
+      rooms: rooms,
+      onRooms: function (e) { self.setState({ rooms: Number(e.target.value) }); },
+      price: {
+        light: fmt(790 + extra),
+        standard: fmt(1190 + extra),
+        max: fmt(1990 + extra),
+        expert: fmt(2990 + extra)
+      },
+      faqs: faqs
+    };
+  }
+}
+(function () {
+  const comp = new Component({"accent": "#E2843E"});
+  Vue.createApp({
+    setup() {
+      const vals = Vue.reactive({});
+      const refresh = () => { const v = comp.renderVals(); for (const k in v) vals[k] = v[k]; };
+      comp.__update = refresh;
+      refresh();
+      Vue.onMounted(() => { if (comp.componentDidMount) comp.componentDidMount(); });
+      return vals;
+    }
+  }).mount('#app');
+})();
+</script>
+</body>
+</html>
