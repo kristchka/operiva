@@ -72,7 +72,19 @@ button:disabled{opacity:.45;cursor:default}
 .hx-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,6,5,.55) 0%,rgba(8,6,5,0) 22%),linear-gradient(0deg,rgba(8,6,5,.5) 0%,rgba(8,6,5,0) 30%)}
 .hx-panel{position:absolute;left:0;top:0;bottom:0;width:calc(var(--pw) + 120px);background:rgba(255,244,230,.05);backdrop-filter:blur(24px) saturate(125%);-webkit-backdrop-filter:blur(24px) saturate(125%);-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 260px),transparent 100%);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 260px),transparent 100%)}
 .hx-word{position:absolute;left:0;right:0;top:0;margin:0;padding:calc(96px + (300px - var(--fs)) * .8) 0 0 40px;box-sizing:border-box;font-family:'Inter Tight',sans-serif;font-weight:800;font-size:var(--fs);line-height:.8;letter-spacing:-0.06em;white-space:nowrap;pointer-events:none;background:linear-gradient(90deg,rgba(255,244,230,.26) 0,rgba(255,244,230,.26) calc(var(--pw) - 210px),#FFF8EE calc(var(--pw) + 70px),#FFF8EE 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hx-top{position:absolute;left:44px;right:44px;top:28px;display:flex;align-items:center;justify-content:space-between;gap:16px;z-index:5}
+.hx-top{position:absolute;left:44px;right:44px;top:28px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;z-index:5}
+.hx-cta{justify-self:end}
+.hx-nav,.snav-links{display:flex;gap:2px}
+.hx-nav{padding:5px;border-radius:999px;background:rgba(14,11,8,.38);border:1px solid rgba(255,236,212,.14);backdrop-filter:blur(14px) saturate(130%);-webkit-backdrop-filter:blur(14px) saturate(130%)}
+.nav-a{display:inline-flex;align-items:center;min-height:36px;padding:0 14px;border-radius:999px;font-size:14px;font-weight:500;color:#EFE6DA;white-space:nowrap;transition:background .2s,color .2s}
+.nav-a:hover{background:rgba(255,240,220,.10);opacity:1}
+.nav-a.on{background:#FFF8EE;color:#16110C;font-weight:600}
+@media (max-width:1240px){.nav-x{display:none}}
+section[id]{scroll-margin-top:-36px}
+.snav{position:fixed;z-index:60;top:10px;left:50%;width:min(1296px, calc(100% - 24px));box-sizing:border-box;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:16px;padding:6px 6px 6px 22px;border-radius:999px;background:rgba(18,14,10,.82);border:1px solid rgba(255,236,212,.12);backdrop-filter:blur(18px) saturate(140%);-webkit-backdrop-filter:blur(18px) saturate(140%);box-shadow:0 18px 40px rgba(0,0,0,.35);color:#FFF8EE;transform:translate(-50%,-150%);visibility:hidden;transition:transform .35s ease,visibility 0s linear .35s}
+.snav.on{transform:translate(-50%,0);visibility:visible;transition:transform .35s ease}
+.snav-logo{font-family:'Inter Tight',sans-serif;font-weight:800;font-size:17px;letter-spacing:-.02em;white-space:nowrap}
+.snav-cta{justify-self:end;min-height:42px !important;padding:0 18px !important;font-size:14px !important;white-space:nowrap}
 .hx-offer{position:absolute;left:44px;bottom:44px;width:370px;display:flex;flex-direction:column;gap:14px;z-index:5}
 .hx-card{position:absolute;right:44px;bottom:44px;width:340px;box-sizing:border-box;border-radius:24px;padding:18px;background:rgba(16,12,9,.62);border:1px solid rgba(255,236,212,.22);backdrop-filter:blur(20px) saturate(130%);-webkit-backdrop-filter:blur(20px) saturate(130%);box-shadow:0 30px 70px rgba(0,0,0,.45);z-index:5}
 .hx-pill{position:absolute;right:44px;top:104px;display:flex;align-items:center;gap:10px;padding:8px 14px 8px 8px;border-radius:999px;background:rgba(255,250,243,.94);color:#16110C;box-shadow:0 14px 34px rgba(0,0,0,.35);z-index:5}
@@ -99,7 +111,12 @@ button:disabled{opacity:.45;cursor:default}
 .hx{height:auto;--pw:100%;display:flex;flex-direction:column;padding:22px 20px 26px}
 .hx-photo{position:absolute;height:420px;object-position:72% 50%}
 .hx-shade{background:linear-gradient(180deg,rgba(8,6,5,.6) 0%,rgba(8,6,5,.1) 30%,rgba(11,9,7,.85) 62%,#0B0907 72%)}
-.hx-panel,.hx-links,.hx-pill{display:none !important}
+.hx-panel,.hx-nav,.hx-pill{display:none !important}
+.snav{grid-template-columns:auto minmax(0,1fr) auto;gap:12px}
+.snav-links{overflow-x:auto;scrollbar-width:none;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 10px,#000 calc(100% - 18px),transparent);mask-image:linear-gradient(90deg,transparent 0,#000 10px,#000 calc(100% - 18px),transparent)}
+.snav-links::-webkit-scrollbar{display:none}
+.snav .nav-x{display:inline-flex}
+section[id]{scroll-margin-top:-4px}
 .hx-top{order:-1}
 .hx-top,.hx-offer,.hx-word,.hx-card{position:relative;left:auto;right:auto;top:auto;bottom:auto}
 .hx-word{background:none;color:#FFF8EE;padding:0;font-size:30vw;margin:150px 0 30px}
@@ -127,6 +144,11 @@ footer.cd{padding:28px 22px 0 !important}
 .hx-card{margin-top:22px}
 .hx-logo{white-space:nowrap;font-size:17px !important}
 .hx-cta{padding:0 16px !important;font-size:13px;white-space:nowrap}
+.snav{top:8px;width:calc(100% - 16px);grid-template-columns:auto minmax(0,1fr);gap:8px;padding:5px 5px 5px 14px}
+.snav-logo{font-size:15px}
+.snav-cta{display:none !important}
+.nav-a{min-height:34px;padding:0 12px;font-size:13px}
+section[id]{scroll-margin-top:-8px}
 /* criteria: icon left, text right */
 .crit .num-grid{row-gap:20px}
 .crit .num-cell{display:grid;grid-template-columns:40px minmax(0,1fr);column-gap:14px;align-items:start}
@@ -204,7 +226,7 @@ footer nav{gap:4px 20px !important}
 <div style="font-family: Inter, system-ui, sans-serif; color: #F3EBE0; background: #0E0B08; padding: 12px max(16px, env(safe-area-inset-right, 0px)) 0 max(16px, env(safe-area-inset-left, 0px)); box-sizing: border-box; min-width: 0">
 
 <!-- ================= HERO (фото лобби + стекло) ================= -->
-<section class="hx">
+<section id="top" class="hx">
   <img class="hx-photo" src="lobby.webp" alt="Лобби отеля вечером: арка из травертина, стойка ресепшен и вид на море">
   <div class="hx-shade" aria-hidden="true"></div>
   <div class="hx-panel" aria-hidden="true"></div>
@@ -212,13 +234,12 @@ footer nav{gap:4px 20px !important}
 
   <div class="hx-top">
     <a href="#top" class="hx-logo" style="font-family: 'Inter Tight', sans-serif; font-weight: 800; font-size: 19px; letter-spacing: -0.02em">AISI HOTEL</a>
-    <nav aria-label="Разделы" style="display: flex; gap: 26px; align-items: center; font-size: 14px; font-weight: 500; color: #EFE6DA">
-      <a class="hx-links" href="#live">Попробовать</a>
-      <a class="hx-links" href="#features">Возможности</a>
-      <a class="hx-links" href="#pricing">Тарифы</a>
-      <a class="hx-links" href="#faq">Вопросы</a>
-      <a href="#demo" class="hx-cta" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #FFF8EE; color: #16110C; font-weight: 600">Записаться на демо</a>
+    <nav aria-label="Разделы" class="hx-nav">
+      <template v-for="(n, $index) in nav">
+        <a :class="n.cls" :href="n.href">{{n.label}}</a>
+      </template>
     </nav>
+    <a href="#demo" class="hx-cta" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #FFF8EE; color: #16110C; font-weight: 600">Записаться на демо</a>
   </div>
 
   <div class="hx-offer">
@@ -777,6 +798,17 @@ footer nav{gap:4px 20px !important}
   </footer>
 </section>
 
+<!-- ================= STICKY MENU (появляется после первого экрана) ================= -->
+<header :class="snavCls">
+  <a href="#top" class="snav-logo">AISI HOTEL</a>
+  <nav class="snav-links" aria-label="Разделы сайта">
+    <template v-for="(n, $index) in nav">
+      <a :class="n.cls" :href="n.href" :aria-current="n.current">{{n.label}}</a>
+    </template>
+  </nav>
+  <a href="#demo" class="btn-iv snav-cta">Записаться на демо</a>
+</header>
+
 <!-- ================= MOBILE ACTION BAR ================= -->
 <div :class="barCls" role="region" aria-label="Быстрые действия">
   <a href="#live" @click="asGuest" class="mbar-ghost">Поговорить с AISI</a>
@@ -821,10 +853,25 @@ class Component extends DCLogic {
       var inLive = lr ? (lr.top < vh * 0.55 && lr.bottom > vh * 0.45) : false;
       var nearEnd = demo ? demo.getBoundingClientRect().top < vh * 0.9 : false;
       var on = (window.scrollY || 0) > 640 && !inLive && !nearEnd;
-      if (on !== !!self.state.bar) self.setState({ bar: on });
+      var ids = ['live', 'features', 'how', 'pricing', 'onboarding', 'faq'];
+      var sec = '';
+      for (var i = 0; i < ids.length; i++) {
+        var el = document.getElementById(ids[i]);
+        if (el && el.offsetHeight && el.getBoundingClientRect().top < vh * 0.35) sec = ids[i];
+      }
+      var top = (window.scrollY || 0) > 560;
+      if (on !== !!self.state.bar || sec !== (self.state.sec || '') || top !== !!self.state.top) {
+        var moved = sec !== (self.state.sec || '');
+        self.setState({ bar: on, sec: sec, top: top });
+        // keep the active item visible in the phone menu row
+        if (moved) setTimeout(function () {
+          var a = document.querySelector('.snav .nav-a.on');
+          if (a && a.parentNode) a.parentNode.scrollTo({ left: Math.max(0, a.offsetLeft - 24), behavior: 'smooth' });
+        }, 60);
+      }
     };
     window.addEventListener('scroll', this.onScroll, { passive: true });
-    this.onScroll();
+    setTimeout(this.onScroll, 0);
   }
   componentWillUnmount() {
     this.clearTimers();
@@ -1119,7 +1166,15 @@ class Component extends DCLogic {
       reset: function () { self.clearTimers(); self.setState(self.freshChat(self.state.role)); },
       brief: function () { self.sendBrief(); },
       stats: stats,
-      barCls: st.bar ? 'mbar on' : 'mbar'
+      barCls: st.bar ? 'mbar on' : 'mbar',
+      snavCls: st.top ? 'snav on' : 'snav',
+      nav: [
+        ['#live', 'Попробовать', false], ['#features', 'Возможности', false], ['#how', 'Как работает', true],
+        ['#pricing', 'Тарифы', false], ['#onboarding', 'Внедрение', true], ['#faq', 'Вопросы', false]
+      ].map(function (x) {
+        var on = st.sec === x[0].slice(1);
+        return { href: x[0], label: x[1], cls: 'nav-a' + (x[2] ? ' nav-x' : '') + (on ? ' on' : ''), current: on ? 'true' : 'false' };
+      })
     };
     return Object.assign(liveVals, this.pageVals());
   }
