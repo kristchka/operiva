@@ -51,7 +51,13 @@ a:hover{opacity:.85}
 .price-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
 .demo-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
 input[type=range]{accent-color:#E2843E;width:100%}
-.live-grid{display:grid;grid-template-columns:minmax(0,0.92fr) minmax(0,1.08fr);gap:16px}
+.live-grid{display:grid;grid-template-columns:minmax(0,0.92fr) minmax(0,1.08fr);gap:12px}
+.live-card{padding:22px;border-radius:32px}
+.live-top{display:flex;justify-content:space-between;align-items:flex-end;gap:16px 32px;flex-wrap:wrap;margin-bottom:18px}
+.live-top > :first-child{flex:1 1 380px}
+.live-title{font-size:clamp(28px,2.5vw,36px);max-width:760px}
+.live-lead{margin:10px 0 0;font-size:15px;line-height:1.5;color:#BFB3A6}
+.chat-box,.board-box{height:clamp(380px,calc(100vh - 230px),500px)}
 .chat-scroll,.board-scroll{scrollbar-width:thin}
 .tdot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#9C9084;animation:tblink 1.2s infinite ease-in-out}
 .tdot:nth-child(2){animation-delay:.18s}.tdot:nth-child(3){animation-delay:.36s}
@@ -61,11 +67,11 @@ input[type=range]{accent-color:#E2843E;width:100%}
 button:disabled{opacity:.45;cursor:default}
 .fld{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600;color:#16110C}
 .fld input{min-height:52px;padding:0 18px;border-radius:16px;border:1px solid #D9CCBB;background:#FFFDF9;font:400 16px Inter,sans-serif;color:#16110C}
-.hx{position:relative;height:700px;overflow:hidden;border-radius:32px;color:#FFFFFF;background:#0B0907;container-type:inline-size;--pw:450px}
+.hx{position:relative;height:700px;overflow:hidden;border-radius:32px;color:#FFFFFF;background:#0B0907;container-type:inline-size;--fs:min(300px, calc(26cqw - 50px));--pw:calc(var(--fs) * 1.5)}
 .hx-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 58%}
 .hx-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,6,5,.55) 0%,rgba(8,6,5,0) 22%),linear-gradient(0deg,rgba(8,6,5,.5) 0%,rgba(8,6,5,0) 30%)}
 .hx-panel{position:absolute;left:0;top:0;bottom:0;width:calc(var(--pw) + 120px);background:rgba(255,244,230,.05);backdrop-filter:blur(24px) saturate(125%);-webkit-backdrop-filter:blur(24px) saturate(125%);-webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 260px),transparent 100%);mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 260px),transparent 100%)}
-.hx-word{position:absolute;left:0;right:0;top:0;margin:0;padding:96px 0 0 40px;box-sizing:border-box;font-family:'Inter Tight',sans-serif;font-weight:800;font-size:clamp(250px,27cqw,300px);line-height:.8;letter-spacing:-0.06em;white-space:nowrap;pointer-events:none;background:linear-gradient(90deg,rgba(255,244,230,.26) 0,rgba(255,244,230,.26) calc(var(--pw) - 210px),#FFF8EE calc(var(--pw) + 70px),#FFF8EE 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hx-word{position:absolute;left:0;right:0;top:0;margin:0;padding:calc(96px + (300px - var(--fs)) * .8) 0 0 40px;box-sizing:border-box;font-family:'Inter Tight',sans-serif;font-weight:800;font-size:var(--fs);line-height:.8;letter-spacing:-0.06em;white-space:nowrap;pointer-events:none;background:linear-gradient(90deg,rgba(255,244,230,.26) 0,rgba(255,244,230,.26) calc(var(--pw) - 210px),#FFF8EE calc(var(--pw) + 70px),#FFF8EE 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hx-top{position:absolute;left:44px;right:44px;top:28px;display:flex;align-items:center;justify-content:space-between;gap:16px;z-index:5}
 .hx-offer{position:absolute;left:44px;bottom:44px;width:370px;display:flex;flex-direction:column;gap:14px;z-index:5}
 .hx-card{position:absolute;right:44px;bottom:44px;width:340px;box-sizing:border-box;border-radius:24px;padding:18px;background:rgba(16,12,9,.62);border:1px solid rgba(255,236,212,.22);backdrop-filter:blur(20px) saturate(130%);-webkit-backdrop-filter:blur(20px) saturate(130%);box-shadow:0 30px 70px rgba(0,0,0,.45);z-index:5}
@@ -130,6 +136,9 @@ footer.cd{padding:28px 22px 0 !important}
 /* live demo */
 .role-sw{display:flex !important;width:100%}
 .role-sw button{flex:1;padding:0 12px !important}
+.live-card{padding:0;background:none;border:0;border-radius:0}
+.live-top{margin-bottom:16px}
+.live-title{font-size:30px}
 .chat-box{height:500px !important;border-radius:24px !important}
 .chat-head{padding:14px !important;gap:10px !important}
 .reset-btn{width:40px;padding:0 !important}
@@ -280,88 +289,89 @@ footer nav{gap:4px 20px !important}
 
 <!-- ================= LIVE: chat + notification board ================= -->
 <section id="live" class="w sec">
-  <div class="head-row" style="margin-bottom: 28px">
-    <div>
-      <p class="ey">Живая демонстрация</p>
-      <h2 class="h2" style="max-width: 780px">Напишите AISI как гость — и смотрите, как отель реагирует</h2>
+ <div class="cd live-card">
+  <div class="live-top">
+    <div style="min-width: 0">
+      <p class="ey" style="margin-bottom: 10px">Живая демонстрация</p>
+      <h2 class="h2 live-title">Напишите AISI как гость — и смотрите, как отель реагирует</h2>
+      <p class="live-lead"><span class="hide-sm">Слева разговор, справа</span><span class="show-sm-i">Сверху разговор, ниже</span> — доска уведомлений для команды и собственника.</p>
     </div>
-    <p class="lead" style="max-width: 380px"><span class="hide-sm">Слева разговор, справа доска</span><span class="show-sm-i">Сверху разговор, ниже доска</span> уведомлений, которую видят администратор, службы и собственник. Задачи можно брать и закрывать.</p>
-  </div>
 
-  <div role="group" aria-label="Чьими глазами смотреть" class="cd role-sw" style="display: inline-flex; gap: 4px; padding: 5px; border-radius: 999px; margin-bottom: 16px">
+  <div role="group" aria-label="Чьими глазами смотреть" class="cd role-sw" style="display: inline-flex; flex: none; gap: 4px; padding: 5px; border-radius: 999px">
     <button type="button" @click="asGuest" :aria-pressed="rolePressed.guest" :style="`min-height: 44px; padding: 0 20px; border-radius: 999px; border: 0; background: ${roleBg.guest}; color: ${roleFg.guest}; font: 600 15px Inter, sans-serif; cursor: pointer`">Я гость<span class="hide-sm">, бронирую номер</span></button>
     <button type="button" @click="asOwner" :aria-pressed="rolePressed.owner" :style="`min-height: 44px; padding: 0 20px; border-radius: 999px; border: 0; background: ${roleBg.owner}; color: ${roleFg.owner}; font: 600 15px Inter, sans-serif; cursor: pointer`">Я владелец<span class="hide-sm"> отеля</span></button>
+  </div>
   </div>
 
   <div class="live-grid">
     <!-- chat -->
-    <div class="chat-box" style="background: #F6F0E7; color: #16110C; border-radius: 28px; height: 560px; display: flex; flex-direction: column; overflow: hidden">
-      <div class="chat-head" style="display: flex; align-items: center; gap: 12px; padding: 18px 20px; border-bottom: 1px solid #E4D8C8">
-        <span aria-hidden="true" style="width: 42px; height: 42px; border-radius: 50%; background: #16110C; display: grid; place-items: center; flex: none"><span :style="`width: 14px; height: 14px; border-radius: 50%; background: ${accent}`"></span></span>
+    <div class="chat-box" style="background: #F6F0E7; color: #16110C; border-radius: 24px; display: flex; flex-direction: column; overflow: hidden">
+      <div class="chat-head" style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid #E4D8C8">
+        <span aria-hidden="true" style="width: 36px; height: 36px; border-radius: 50%; background: #16110C; display: grid; place-items: center; flex: none"><span :style="`width: 12px; height: 12px; border-radius: 50%; background: ${accent}`"></span></span>
         <div style="flex: 1; min-width: 0">
-          <p style="margin: 0; font-weight: 700; font-size: 16px">{{chatTitle}}</p>
+          <p style="margin: 0; font-weight: 700; font-size: 15px">{{chatTitle}}</p>
           <p :style="`margin: 0; font-size: 13px; color: ${statusColor}`">{{statusText}}</p>
         </div>
-        <button type="button" @click="reset" aria-label="Начать заново" class="reset-btn" style="min-height: 40px; padding: 0 14px; border-radius: 999px; border: 1px solid #D9CCBB; background: #FFFDF9; font: 600 13px Inter, sans-serif; color: #16110C; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg class="show-sm" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg><span class="hide-sm">Начать заново</span></button>
+        <button type="button" @click="reset" aria-label="Начать заново" class="reset-btn" style="min-height: 36px; padding: 0 14px; border-radius: 999px; border: 1px solid #D9CCBB; background: #FFFDF9; font: 600 13px Inter, sans-serif; color: #16110C; cursor: pointer; display: inline-flex; align-items: center; justify-content: center"><svg class="show-sm" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg><span class="hide-sm">Начать заново</span></button>
       </div>
 
-      <div class="chat-scroll" aria-live="polite" style="flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column-reverse; gap: 8px; padding: 18px 18px 12px">
+      <div class="chat-scroll" aria-live="polite" style="flex: 1; min-height: 0; overflow-y: auto; display: flex; flex-direction: column-reverse; gap: 8px; padding: 14px 16px 10px">
         <template v-if="typing">
           <div style="align-self: flex-start; display: inline-flex; gap: 5px; align-items: center; padding: 13px 16px; border-radius: 18px 18px 18px 4px; background: #FFFFFF" aria-label="AISI печатает"><span class="tdot"></span><span class="tdot"></span><span class="tdot"></span></div>
         </template>
         <template v-for="(m, $index) in msgsRev">
-          <p :style="`margin: 0; max-width: 84%; align-self: ${m.align}; background: ${m.bg}; border-radius: ${m.radius}; padding: 10px 14px; font-size: 15px; line-height: 1.45; color: #16110C`">{{m.text}}</p>
+          <p :style="`margin: 0; max-width: 84%; align-self: ${m.align}; background: ${m.bg}; border-radius: ${m.radius}; padding: 9px 13px; font-size: 14.5px; line-height: 1.45; color: #16110C`">{{m.text}}</p>
         </template>
       </div>
 
-      <div style="padding: 12px 16px 16px; border-top: 1px solid #E4D8C8; display: flex; flex-direction: column; gap: 10px">
+      <div style="padding: 10px 14px 14px; border-top: 1px solid #E4D8C8; display: flex; flex-direction: column; gap: 8px">
         <div class="chips-row" style="display: flex; gap: 6px; flex-wrap: wrap">
           <template v-for="(c, $index) in chips">
-            <button type="button" @click="c.pick" :disabled="typing" style="min-height: 38px; padding: 0 14px; border-radius: 999px; border: 1px solid #D9CCBB; background: #FFFDF9; font: 500 14px Inter, sans-serif; color: #16110C; cursor: pointer">{{c.label}}</button>
+            <button type="button" @click="c.pick" :disabled="typing" style="min-height: 34px; padding: 0 12px; border-radius: 999px; border: 1px solid #D9CCBB; background: #FFFDF9; font: 500 13.5px Inter, sans-serif; color: #16110C; cursor: pointer">{{c.label}}</button>
           </template>
         </div>
         <form @submit="onSubmit" style="display: flex; gap: 8px; align-items: center">
           <label for="live-msg" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Сообщение для AISI</label>
-          <input id="live-msg" class="chat-in" type="text" :value="draft" @input="onDraft" :placeholder="placeholder" autocomplete="off" style="flex: 1; min-width: 0; min-height: 48px; padding: 0 18px; border-radius: 999px; border: 1px solid #D9CCBB; background: #FFFDF9; font: 400 15px Inter, sans-serif; color: #16110C">
-          <button type="submit" aria-label="Отправить" :disabled="typing" style="flex: none; width: 48px; height: 48px; border-radius: 50%; border: 0; background: #16110C; color: #FFF8EE; display: grid; place-items: center; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <input id="live-msg" class="chat-in" type="text" :value="draft" @input="onDraft" :placeholder="placeholder" autocomplete="off" style="flex: 1; min-width: 0; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #D9CCBB; background: #FFFDF9; font: 400 15px Inter, sans-serif; color: #16110C">
+          <button type="submit" aria-label="Отправить" :disabled="typing" style="flex: none; width: 44px; height: 44px; border-radius: 50%; border: 0; background: #16110C; color: #FFF8EE; display: grid; place-items: center; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </form>
       </div>
     </div>
 
     <!-- board -->
-    <div class="cd2 board-box" style="border-radius: 28px; height: 560px; display: flex; flex-direction: column; overflow: hidden; color: #FFF8EE">
-      <div class="board-pad" style="padding: 20px 22px 16px; display: flex; flex-direction: column; gap: 16px; border-bottom: 1px solid rgba(255,236,212,0.10)">
+    <div class="cd2 board-box" style="border-radius: 24px; display: flex; flex-direction: column; overflow: hidden; color: #FFF8EE">
+      <div class="board-pad" style="padding: 14px 18px 12px; display: flex; flex-direction: column; gap: 12px; border-bottom: 1px solid rgba(255,236,212,0.10)">
         <div class="board-head" style="display: flex; justify-content: space-between; align-items: center; gap: 6px 12px">
-          <p class="board-title" style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: -0.02em">Дашборд отеля · уведомления</p>
+          <p class="board-title" style="margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.02em">Дашборд отеля · уведомления</p>
           <span style="display: inline-flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: #57D79A"><span style="width: 8px; height: 8px; border-radius: 50%; background: #57D79A"></span>в реальном времени</span>
         </div>
         <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
           <template v-for="(s, $index) in stats">
-            <div style="background: rgba(255,240,220,0.06); border-radius: 16px; padding: 12px 14px">
-              <p :style="`margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 28px; color: ${s.color}`">{{s.value}}</p>
+            <div style="background: rgba(255,240,220,0.06); border-radius: 14px; padding: 9px 12px">
+              <p :style="`margin: 0; font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 24px; line-height: 1.15; color: ${s.color}`">{{s.value}}</p>
               <p style="margin: 2px 0 0; font-size: 12px; color: #A89B8C">{{s.label}}</p>
             </div>
           </template>
         </div>
       </div>
 
-      <div class="board-scroll board-pad" aria-live="polite" style="flex: 1; min-height: 0; overflow-y: auto; padding: 16px 22px; display: flex; flex-direction: column; gap: 10px">
+      <div class="board-scroll board-pad" aria-live="polite" style="flex: 1; min-height: 0; overflow-y: auto; padding: 12px 18px; display: flex; flex-direction: column; gap: 8px">
         <template v-if="noNotes">
           <div style="margin: auto 0; text-align: center; padding: 24px; color: #A89B8C; font-size: 15px; line-height: 1.5">Пока тихо.<br>Выберите вопрос <span class="hide-sm">слева</span><span class="show-sm-i">выше</span> — события отеля появятся здесь.</div>
         </template>
         <template v-for="(n, $index) in notes">
-          <div class="note-in" :style="`background: rgba(255,240,220,0.05); border-radius: 18px; padding: 14px 16px; border: 1px solid ${n.border}; display: flex; flex-direction: column; gap: 8px`">
+          <div class="note-in" :style="`background: rgba(255,240,220,0.05); border-radius: 16px; padding: 12px 14px; border: 1px solid ${n.border}; display: flex; flex-direction: column; gap: 6px`">
             <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px">
               <span :style="`font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 999px; background: ${n.bg}; color: ${n.fg}`">{{n.role}}</span>
               <span style="font-family: 'JetBrains Mono', monospace; font-size: 12px; color: #A89B8C">{{n.time}}</span>
             </div>
-            <p style="margin: 0; font-weight: 600; font-size: 16px">{{n.title}}</p>
+            <p style="margin: 0; font-weight: 600; font-size: 15px">{{n.title}}</p>
             <p style="margin: 0; font-size: 14px; line-height: 1.45; color: #CFC4B7">{{n.detail}}</p>
             <template v-if="n.isTask">
               <div style="display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: 2px">
                 <span :style="`font-size: 13px; font-weight: 600; color: ${n.statusColor}`">{{n.statusLabel}}</span>
                 <template v-if="n.hasAction">
-                  <button type="button" @click="n.act" :style="`min-height: 40px; padding: 0 16px; border-radius: 999px; border: 0; background: ${n.actBg}; color: #16110C; font: 700 14px Inter, sans-serif; cursor: pointer`">{{n.actLabel}}</button>
+                  <button type="button" @click="n.act" :style="`min-height: 36px; padding: 0 14px; border-radius: 999px; border: 0; background: ${n.actBg}; color: #16110C; font: 700 14px Inter, sans-serif; cursor: pointer`">{{n.actLabel}}</button>
                 </template>
               </div>
             </template>
@@ -369,11 +379,12 @@ footer nav{gap:4px 20px !important}
         </template>
       </div>
 
-      <div class="board-pad" style="padding: 14px 22px 18px; border-top: 1px solid rgba(255,236,212,0.10)">
-        <button type="button" @click="brief" class="btn-iv" style="width: 100%; min-height: 48px">Отправить брифинг собственнику</button>
+      <div class="board-pad" style="padding: 10px 18px 14px; border-top: 1px solid rgba(255,236,212,0.10)">
+        <button type="button" @click="brief" class="btn-iv" style="width: 100%; min-height: 44px">Отправить брифинг собственнику</button>
       </div>
     </div>
   </div>
+ </div>
   <p style="margin: 14px 0 0; font-size: 13px; color: #A89B8C">Демонстрация на заготовленных сценариях: номер, цена и время условные. Настоящая AISI отвечает по данным вашего отеля.</p>
 </section>
 
